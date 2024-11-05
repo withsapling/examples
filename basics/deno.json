@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "start": "deno run -A --watch index.ts",
+    "dev": "deno run -A --watch index.ts"
+  },
+  "imports": {
+    "@sapling/router": "jsr:@sapling/router@^0.0.8",
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.0.10",
+    "unocss": "npm:unocss@^0.64.0"
+  },
+  "nodeModulesDir":"auto"
+}
