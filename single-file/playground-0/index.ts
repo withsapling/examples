@@ -5,11 +5,6 @@ import presetUno from "npm:@unocss/preset-uno";
 import presetTypography from "npm:@unocss/preset-typography";
 
 const config = defineConfig({
-  theme: {
-    colors: {
-      primary: "#007bff",
-    },
-  },
   presets: [presetUno(), presetTypography()],
 });
 
@@ -49,12 +44,6 @@ router.get("/", async () => {
         <meta
           name="description"
           content="Sapling is a modern JavaScript framework for building fast and scalable websites with ease."
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
         />
         <script
           src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"
@@ -134,18 +123,19 @@ router.get("/", async () => {
                 </p>
                 <div class="flex gap-4 justify-center">
                   <div
-                    class="relative bg-gray-900 text-white px-6 py-3 rounded-lg font-medium flex items-center justify-between"
+                    class="relative bg-gray-900 text-white pt-3 pb-3 pl-3 pr-2 rounded-lg font-medium flex items-center justify-between"
                   >
                     <span class="mr-2"
-                      >› deno run -A jsr:@sapling/sapling init</span
+                      >› deno -A jsr:@sapling/create</span
                     >
                     <button
                       id="copy-button"
                       class="p-2"
                       aria-label="Copy command to clipboard"
-                      onclick="copyToClipboard('deno run -A jsr:@sapling/sapling init')"
+                      onclick="copyToClipboard('deno -A jsr:@sapling/create')"
                     >
                       <iconify-icon
+                        class="flex"
                         id="copy-icon"
                         icon="ic:baseline-content-copy"
                         style="color: white;"
@@ -176,7 +166,7 @@ router.get("/", async () => {
             <div class="bg-white py-8 px-4 text-center">
               <div class="max-w-4xl mx-auto">
                 <h3 class="text-2xl font-semibold text-gray-800">
-                  Don't believe us? This entire website is 259 lines of code.
+                  Don't believe us? This entire website is 282 lines of code in a single file.
                 </h3>
                 <a
                   href="https://dash.deno.com/playground/sapling-playground-0"
