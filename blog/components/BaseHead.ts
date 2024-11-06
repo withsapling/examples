@@ -2,7 +2,7 @@ import { html } from "jsr:@hono/hono/html";
 
 export function BaseHead({
   title = "Sapling",
-  description = "Sapling is a modern SSR framework for simpler modern websites",
+  description = "Sapling is a modern SSR framework for simpler modern websites"
 }) {
   return html`
     <title>${title}</title>
