@@ -17,7 +17,7 @@ export default async function Layout({ ...props }: BaseLayoutProps) {
       })}
       ${await props.head}
     `,
-    bodyClass: 'font-sans',
+    bodyClass: `font-sans @dark:bg-black @dark:text-white ${props.bodyClass}`,
     children: props.children
   });
 }
