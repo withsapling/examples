@@ -39,5 +39,5 @@ router.setNotFoundHandler(async () => {
 Deno.serve({
   port: 8080,
   onListen: () => console.log("Server is running on http://localhost:8080"),
-  handler: (req) => router.handle(req),
+  handler: async (req) => await router.handle(req) ?? new Response(null, { status: 404 }),
 });
