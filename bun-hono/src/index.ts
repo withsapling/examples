@@ -6,6 +6,9 @@ const app = new Hono()
 app.get('/', async (c) => {
   const time = new Date().toLocaleTimeString()
   const page = await Layout({
+    head: html`
+    <title>Hello World 🌍</title>
+    `,
     children: html`
       <div class="flex flex-col justify-center items-center h-screen gap-4">
         <h1 class="text-6xl font-bold">Hello World 🌍</h1>
