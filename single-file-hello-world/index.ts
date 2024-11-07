@@ -1,5 +1,3 @@
-/// <reference lib="deno.ns" />
-/// <reference lib="dom" />
 import { Layout, html } from "jsr:@sapling/sapling";
 import { Router, render } from "jsr:@sapling/router";
 const router = new Router();
