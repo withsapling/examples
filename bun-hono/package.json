@@ -1,0 +1,14 @@
+{
+  "name": "my-app",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --hot src/index.ts"
+  },
+  "dependencies": {
+    "@hono/hono": "npm:@jsr/hono__hono",
+    "@sapling/sapling": "npm:@jsr/sapling__sapling"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
