@@ -4,7 +4,6 @@
     "dev": "deno run -A --watch main.ts"
   },
   "imports": {
-    "@oak/oak": "jsr:@oak/oak@^17.1.3",
     "@sapling/sapling": "jsr:@sapling/sapling@^0.0.12"
   }
 }

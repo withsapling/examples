@@ -10,13 +10,12 @@ router.get("/", async () => {
         <meta name="description" content="A micro SSR framework" />
       `,
       bodyClass: "font-sans @dark:bg-black @dark:text-white transition-colors duration-200",
-      children: html`
+    }, html`
         <main class="max-w-screen-lg min-h-screen mx-auto px-4 py-16 flex flex-col items-center justify-center font-sans">
           <h1 class="text-4xl font-bold">Hello World</h1>
         </main>
       `,
-    }),
-  );
+    ));
 });
 
 Deno.serve({

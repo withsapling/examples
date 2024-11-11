@@ -5,7 +5,7 @@ const handler = async () => {
   const time = new Date().toLocaleTimeString();
   const page = await Layout({
     head: html` <title>Hello World 🌍</title> `,
-    children: html`
+  }, html`
       <div class="flex flex-col justify-center items-center h-screen gap-4 text-center">
         <h1 class="text-6xl font-bold">Hello World 🌍</h1>
         <p class="text-2xl">
@@ -17,8 +17,7 @@ const handler = async () => {
           It was server rendered at ${time}
         </p>
       </div>
-    `,
-  });
+    `,);
   return new Response(page, {
     headers: { "Content-Type": "text/html" },
   });

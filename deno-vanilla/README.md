@@ -1,4 +1,4 @@
 ```
-deno run -A --watch main.ts
+deno task start
 ```
 

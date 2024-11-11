@@ -161,7 +161,7 @@ router.get("/", async () => {
       `,
       bodyClass:
         "text-gray-900 font-sans min-h-screen @dark:bg-gray-900 @dark:text-white",
-      children: html`
+    }, html`
         <div class="relative z-10">
           ${renderNav()}
           <main>
@@ -244,35 +244,35 @@ router.get("/", async () => {
             <div class="max-w-4xl mx-auto px-8 py-8">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
                 ${FeatureCard({
-        title: "Zero JavaScript By Default 🙅‍♂️",
-        description:
-          "Just like Astro and 11ty, Sapling doesn't ship any JavaScript to your users. Just HTML, CSS, and JavaScript.",
-      })}
+      title: "Zero JavaScript By Default 🙅‍♂️",
+      description:
+        "Just like Astro and 11ty, Sapling doesn't ship any JavaScript to your users. Just HTML, CSS, and JavaScript.",
+    })}
                 ${FeatureCard({
-        title: "Lightning Fast ⚡️",
-        description:
-          "Built with performance in mind, Sapling delivers exceptional speed out of the box.",
-      })}
+      title: "Lightning Fast ⚡️",
+      description:
+        "Built with performance in mind, Sapling delivers exceptional speed out of the box.",
+    })}
                 ${FeatureCard({
-        title: "Modern 💻",
-        description:
-          "Write modern TypeScript, Tailwind CSS (via UnoCSS), and HTML. Sapling is SSR by default.",
-      })}
+      title: "Modern 💻",
+      description:
+        "Write modern TypeScript, Tailwind CSS (via UnoCSS), and HTML. Sapling is SSR by default.",
+    })}
                 ${FeatureCard({
-        title: "Scalable 📈",
-        description:
-          "Designed to scale from a single file (like this one) to a multi-page website.",
-      })}
+      title: "Scalable 📈",
+      description:
+        "Designed to scale from a single file (like this one) to a multi-page website.",
+    })}
                 ${FeatureCard({
-        title: "Built for Deno 🦕",
-        description:
-          "We love Deno. We think it's the future of JavaScript and TypeScript so we built Sapling from the ground up for it.",
-      })}
+      title: "Built for Deno 🦕",
+      description:
+        "We love Deno. We think it's the future of JavaScript and TypeScript so we built Sapling from the ground up for it.",
+    })}
                 ${FeatureCard({
-        title: "No Lock-In 🔒",
-        description:
-          "We don't think you should be locked into one specific framework. If you want to switch to Astro, Next, Remix, etc. you can. Just take your HTML with Tailwind styles and go.",
-      })}
+      title: "No Lock-In 🔒",
+      description:
+        "We don't think you should be locked into one specific framework. If you want to switch to Astro, Next, Remix, etc. you can. Just take your HTML with Tailwind styles and go.",
+    })}
               </div>
             </div>
 
@@ -303,7 +303,7 @@ router.get("/", async () => {
           </main>
         </div>
       `,
-    })
+    )
   );
 });
 

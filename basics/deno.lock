@@ -1,12 +1,10 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@hono/hono@*": "4.6.9",
     "jsr:@hono/hono@^4.6.7": "4.6.9",
     "jsr:@sapling/router@*": "0.0.8",
     "jsr:@sapling/router@^0.0.8": "0.0.8",
-    "jsr:@sapling/sapling@*": "0.0.11",
-    "jsr:@sapling/sapling@^0.0.11": "0.0.11",
+    "jsr:@sapling/sapling@^0.0.12": "0.0.12",
     "jsr:@std/fs@^1.0.5": "1.0.5",
     "jsr:@std/media-types@^1.0.3": "1.0.3",
     "jsr:@std/path@^1.0.7": "1.0.7",
@@ -28,10 +26,10 @@
         "jsr:@std/path"
       ]
     },
-    "@sapling/sapling@0.0.11": {
-      "integrity": "033e789b692f37d11ba85bea0d6aacc619c7c9a6e23a488a149adb648262d10a",
+    "@sapling/sapling@0.0.12": {
+      "integrity": "a07478057eac25845969c341afbed194742c28651cbd9635a64bc594d46d510d",
       "dependencies": [
-        "jsr:@hono/hono@^4.6.7",
+        "jsr:@hono/hono",
         "npm:@unocss/core",
         "npm:@unocss/preset-uno"
       ]
@@ -1070,7 +1068,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@sapling/router@^0.0.8",
-      "jsr:@sapling/sapling@^0.0.11",
+      "jsr:@sapling/sapling@^0.0.12",
       "npm:unocss@0.64"
     ]
   }

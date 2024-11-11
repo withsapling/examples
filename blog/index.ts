@@ -8,13 +8,13 @@ const router = new Router();
 // Home page
 router.get("/", async () => {
   return render(
-    await Layout({
-      children: html`
+    await Layout(
+      html`
         <main class="max-w-screen-lg min-h-screen mx-auto px-4 py-16 flex flex-col items-center justify-center font-sans @dark:bg-black @dark:text-white">
           <h1 class="text-4xl font-bold">Welcome to Sapling</h1>
         </main>
       `,
-    }),
+    ),
   );
 });
 
@@ -27,8 +27,8 @@ router.get("/", async () => {
 // Serve static files
 // The location of this is important. It should be the last route you define.
 router.get("/*", serveStatic({
-    directory: "./static",
-  }),
+  directory: "./static",
+}),
 );
 
 // 404 Handler
