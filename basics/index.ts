@@ -24,8 +24,8 @@ router.get("/", async () => {
 // Serve static files
 // The location of this is important. It should be the last route you define.
 router.get("/*", serveStatic({
-    directory: "./static",
-  }),
+  directory: "./static",
+}),
 );
 
 // 404 Handler
