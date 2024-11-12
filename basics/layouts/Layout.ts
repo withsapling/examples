@@ -21,7 +21,7 @@ export default async function Layout(
         title: props.title,
         description: props.description,
       })}
-      ${await props.head} `,
+      ${await props.head}`,
       bodyClass: `font-sans @dark:bg-black @dark:text-white ${props.bodyClass ?? ``}`,
       children: props.children,
     },

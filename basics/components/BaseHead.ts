@@ -10,23 +10,6 @@ export function BaseHead({
     <link rel="icon" type="image/png" href="/favicon.png" />
     <meta property="og:image" content="/social.png" />
     <style>
-      @font-face {
-        font-display: swap;
-        font-family: "Open Sans";
-        src: url("/assets/fonts/OpenSans-Variable.woff2") format("woff2"),
-          url("/assets/fonts/OpenSans-Variable.woff") format("woff");
-        font-weight: 400 800;
-        font-style: normal;
-      }
-      @font-face {
-        font-display: swap;
-        font-family: "Clash Display";
-        src: url("/assets/fonts/ClashDisplay-Variable.woff2")
-            format("woff2"),
-          url("/assets/fonts/ClashDisplay-Variable.woff") format("woff");
-        font-weight: 400 800;
-        font-style: normal;
-      }
       :root {
         --color-primary: #000;
         --color-on-primary: #fff;
