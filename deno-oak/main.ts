@@ -8,7 +8,7 @@ router.get("/", async (ctx) => {
   const time = new Date().toLocaleTimeString();
   const page = await Layout({
     head: html` <title>Hello World 🌍</title> `,
-  }, html`
+    children: html`
       <div class="flex flex-col justify-center items-center h-screen gap-4">
         <h1 class="text-6xl font-bold">Hello World 🌍</h1>
         <p class="text-2xl">
@@ -21,8 +21,8 @@ router.get("/", async (ctx) => {
           It was server rendered at ${time}
         </p>
       </div>
-    `,
-  );
+      `,
+  });
   // set the content type to html
   ctx.response.type = "text/html";
   // set the body to the page and trim whitespace
