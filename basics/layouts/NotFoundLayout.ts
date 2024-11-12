@@ -1,19 +1,18 @@
 import { Layout as LayoutComponent, html } from "jsr:@sapling/sapling";
 import { BaseHead } from "../components/BaseHead.ts";
 import { config } from "../uno.config.ts";
-import type { BaseLayoutProps } from "./Layout.ts";
 
-export default async function NotFoundLayout(props: BaseLayoutProps) {
+
+
+export default async function NotFoundLayout() {
   return await LayoutComponent(
     {
       unoConfig: config,
       head: html`
         ${await BaseHead({
-        title: props.title,
-        description: props.description,
-      })}
-        ${await props.head}
-      `,
+        title: "Page Not Found",
+        description: "The page you are looking for does not exist.",
+      })}`,
       bodyClass: "font-sans @dark:bg-black @dark:text-white",
       children:
         html` <main

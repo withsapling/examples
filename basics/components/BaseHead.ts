@@ -1,4 +1,4 @@
-import { html } from "jsr:@hono/hono/html";
+import { html } from "@sapling/sapling";
 
 export function BaseHead({
   title = "Sapling",

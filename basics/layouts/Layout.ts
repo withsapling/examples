@@ -12,7 +12,7 @@ export type BaseLayoutProps = LayoutProps & {
 };
 
 export default async function Layout(
-  props: BaseLayoutProps = {},
+  props: BaseLayoutProps
 ) {
   return await SaplingLayout(
     {
