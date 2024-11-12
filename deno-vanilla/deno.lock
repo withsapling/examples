@@ -2,8 +2,8 @@
   "version": "4",
   "specifiers": {
     "jsr:@hono/hono@^4.6.7": "4.6.9",
-    "jsr:@sapling/sapling@*": "0.0.12",
-    "jsr:@sapling/sapling@^0.0.12": "0.0.12",
+    "jsr:@sapling/sapling@*": "0.0.18",
+    "jsr:@sapling/sapling@^0.0.18": "0.0.18",
     "npm:@unocss/core@0.64": "0.64.0",
     "npm:@unocss/preset-uno@0.64.0": "0.64.0"
   },
@@ -11,8 +11,8 @@
     "@hono/hono@4.6.9": {
       "integrity": "4d4975f5c023d4416d26e6dd4a498c56e59958561733f56f55a9be57f023603b"
     },
-    "@sapling/sapling@0.0.12": {
-      "integrity": "a07478057eac25845969c341afbed194742c28651cbd9635a64bc594d46d510d",
+    "@sapling/sapling@0.0.18": {
+      "integrity": "10e0ffe98a5a2cc82f4126d915f586fb968ead014a476cb6d47d355f059cef49",
       "dependencies": [
         "jsr:@hono/hono",
         "npm:@unocss/core",
@@ -74,7 +74,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@sapling/sapling@^0.0.12"
+      "jsr:@sapling/sapling@^0.0.18"
     ]
   }
 }
