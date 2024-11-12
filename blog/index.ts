@@ -28,16 +28,10 @@ router.get("/", async () => {
 // The location of this is important. It should be the last route you define.
 router.get("/*", serveStatic({
   directory: "./static",
-}),
-);
+}));
 
 // 404 Handler
-router.setNotFoundHandler(async () => {
-  return render(await NotFoundLayout({
-    title: "Page Not Found",
-    description: "The page you are looking for does not exist.",
-  }));
-});
+router.setNotFoundHandler(async () => render(await NotFoundLayout()));
 
 Deno.serve({
   port: 8080,
