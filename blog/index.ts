@@ -8,13 +8,13 @@ const router = new Router();
 // Home page
 router.get("/", async () => {
   return render(
-    await Layout(
-      html`
+    await Layout({
+      children: html`
         <main class="max-w-screen-lg min-h-screen mx-auto px-4 py-16 flex flex-col items-center justify-center font-sans @dark:bg-black @dark:text-white">
           <h1 class="text-4xl font-bold">Welcome to Sapling</h1>
         </main>
       `,
-    ),
+    }),
   );
 });
 
@@ -42,5 +42,5 @@ router.setNotFoundHandler(async () => {
 Deno.serve({
   port: 8080,
   onListen: () => console.log("Server is running on http://localhost:8080"),
-  handler: async (req) => await router.handle(req) ?? new Response(null, { status: 404 }),
+  handler: router.fetch,
 });

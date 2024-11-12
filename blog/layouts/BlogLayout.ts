@@ -15,14 +15,15 @@ export default async function BlogLayout({ ...props }: BaseLayoutProps) {
         ${await props.head}
       `,
       bodyClass: "font-sans",
-    },
-    html` <main
+      children: html` <main
       class="flex-1 flex flex-col justify-center items-center min-h-screen"
     >
       <h1 class="text-4xl font-bold font-heading leading-tight mb-8">
         ${props.title}
       </h1>
       <a href="/" class="text-xl hover:underline">Go back to the homepage</a>
-    </main>`
+      </main>
+      `,
+    },
   );
 }

@@ -11,7 +11,7 @@ export type BaseLayoutProps = LayoutProps & {
   description: string;
 };
 
-export default async function Layout({ ...props }: BaseLayoutProps) {
+export default async function Layout(props: BaseLayoutProps) {
   return await SaplingLayout(
     {
       unoConfig: config,
@@ -21,7 +21,7 @@ export default async function Layout({ ...props }: BaseLayoutProps) {
       })}
       ${await props.head} `,
       bodyClass: `font-sans @dark:bg-black @dark:text-white ${props.bodyClass}`,
+      children: props.children,
     },
-    props.children
   );
 }
