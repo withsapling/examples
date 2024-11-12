@@ -12,6 +12,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.0.12"
+    "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.0.18"
   }
 }

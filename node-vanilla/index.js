@@ -3,9 +3,9 @@ import { html, Layout } from "@sapling/sapling";
 
 const server = http.createServer(async (_, res) => {
   const time = new Date().toLocaleTimeString();
-  const page = await Layout(
-    { head: html`<title>Hello World 🌍</title>` },
-    html`
+  const page = await Layout({
+    head: html`<title>Hello World 🌍</title>`,
+    children: html`
       <div
         class="flex flex-col justify-center items-center h-screen gap-4 text-center"
       >
@@ -24,8 +24,8 @@ const server = http.createServer(async (_, res) => {
           It was server rendered at ${time}
         </p>
       </div>
-    `
-  );
+    `,
+  });
   // set content type to html
   res.writeHead(200, { "Content-Type": "text/html" });
   // remove whitespace and newlines
