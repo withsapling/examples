@@ -5,9 +5,7 @@ import { Home } from "./pages/Home.ts";
 const router = new Router();
 
 // Home page
-router.get("/", async () => {
-  return render(await Home());
-});
+router.get("/", async () => render(await Home()));
 
 // Enter additional routes below
 
@@ -16,8 +14,7 @@ router.get("/", async () => {
 // The location of this is important. It should be the last route you define.
 router.get("/*", serveStatic({
   directory: "./static",
-}),
-);
+}));
 
 // 404 Handler
 router.setNotFoundHandler(async () => {
