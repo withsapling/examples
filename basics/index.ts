@@ -17,9 +17,7 @@ router.get("/*", serveStatic({
 }));
 
 // 404 Handler
-router.setNotFoundHandler(async () => {
-  return render(await NotFoundLayout());
-});
+router.setNotFoundHandler(async () => render(await NotFoundLayout()));
 
 Deno.serve({
   port: 8080,
