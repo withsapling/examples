@@ -3,9 +3,8 @@
   "specifiers": {
     "jsr:@hono/hono@^4.6.7": "4.6.10",
     "jsr:@sapling/markdown@^0.0.3": "0.0.3",
-    "jsr:@sapling/router@^0.0.11": "0.0.11",
-    "jsr:@sapling/sapling@*": "0.0.18",
-    "jsr:@sapling/sapling@0.0.18": "0.0.18",
+    "jsr:@sapling/router@^0.0.16": "0.0.16",
+    "jsr:@sapling/sapling@^0.0.18": "0.0.18",
     "jsr:@std/collections@^1.0.5": "1.0.9",
     "jsr:@std/front-matter@^1.0.5": "1.0.5",
     "jsr:@std/fs@^1.0.5": "1.0.5",
@@ -31,8 +30,8 @@
         "npm:shiki"
       ]
     },
-    "@sapling/router@0.0.11": {
-      "integrity": "1d3d51055835fc337a91586cc98874e8861e46ad3a88849b6f52b6cd7b92ff40",
+    "@sapling/router@0.0.16": {
+      "integrity": "64385994f12853a818dc3afe0c07ccd4dac3c59dde3d6c90f890536eac93eed1",
       "dependencies": [
         "jsr:@std/fs",
         "jsr:@std/media-types",
@@ -613,8 +612,8 @@
   "workspace": {
     "dependencies": [
       "jsr:@sapling/markdown@^0.0.3",
-      "jsr:@sapling/router@^0.0.11",
-      "jsr:@sapling/sapling@0.0.18",
+      "jsr:@sapling/router@^0.0.16",
+      "jsr:@sapling/sapling@^0.0.18",
       "jsr:@std/front-matter@^1.0.5"
     ]
   }
