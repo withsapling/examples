@@ -1,7 +1,7 @@
 {
   "tasks": {
     "start": "deno run -A --watch index.ts",
-    "dev": "deno run -A --watch index.ts"
+    "dev": "ENV=development deno run -A --watch index.ts"
   },
   "imports": {
     "@sapling/router": "jsr:@sapling/router@^0.0.20",
