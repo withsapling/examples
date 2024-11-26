@@ -1,14 +1,16 @@
 import { html } from "@sapling/sapling";
-import { Router, render, serveStatic } from "@sapling/router";
+import { Router, serveStatic } from "@sapling/router";
 import Layout from "./layouts/Layout.ts";
 import NotFoundLayout from "./layouts/NotFoundLayout.ts";
 
 const router = new Router();
 
 // Home page
-router.get("/", async () => {
-  return render(
+router.get("/", async (c) => {
+  return c.html(
     await Layout({
+      title: "Home",
+      description: "Welcome to Sapling",
       children: html`
         <main class="max-w-screen-lg min-h-screen mx-auto px-4 py-16 flex flex-col items-center justify-center font-sans @dark:bg-black @dark:text-white">
           <h1 class="text-4xl font-bold">Welcome to Sapling</h1>
@@ -32,11 +34,13 @@ router.get("/*", serveStatic({
 );
 
 // 404 Handler
-router.setNotFoundHandler(async () => {
-  return render(await NotFoundLayout({
-    title: "Page Not Found",
-    description: "The page you are looking for does not exist.",
-  }));
+router.setNotFoundHandler(async (c) => {
+  return c.html(
+    await NotFoundLayout({
+      title: "Page Not Found",
+      description: "The page you are looking for does not exist.",
+    }),
+  );
 });
 
 Deno.serve({

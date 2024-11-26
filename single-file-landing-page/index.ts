@@ -1,5 +1,5 @@
 import { Layout, html } from "jsr:@sapling/sapling";
-import { Router, render } from "jsr:@sapling/router";
+import { Router } from "jsr:@sapling/router";
 import { defineConfig } from "npm:unocss";
 import presetUno from "npm:@unocss/preset-uno";
 import presetTypography from "npm:@unocss/preset-typography";
@@ -82,8 +82,8 @@ function FeatureCard({
   `;
 }
 
-router.get("/", async () => {
-  return render(
+router.get("/", async (c) => {
+  return c.html(
     await Layout({
       unoConfig: config,
       head: html`

@@ -1,11 +1,11 @@
-import { Router, render, serveStatic } from "@sapling/router";
+import { Router, serveStatic } from "@sapling/router";
 import NotFoundLayout from "./layouts/NotFoundLayout.ts";
 import { Home } from "./pages/Home.ts";
 
 const router = new Router();
 
 // Home page
-router.get("/", async () => render(await Home()));
+router.get("/", async (c) => c.html(await Home()));
 
 // Enter additional routes below
 
@@ -17,7 +17,7 @@ router.get("/*", serveStatic({
 }));
 
 // 404 Handler
-router.setNotFoundHandler(async () => render(await NotFoundLayout()));
+router.setNotFoundHandler(async (c) => c.html(await NotFoundLayout()));
 
 Deno.serve({
   port: 8080,

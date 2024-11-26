@@ -4,12 +4,13 @@
     "jsr:@hono/hono@*": "4.6.9",
     "jsr:@hono/hono@^4.6.7": "4.6.9",
     "jsr:@sapling/markdown@^0.0.3": "0.0.3",
-    "jsr:@sapling/router@^0.0.9": "0.0.9",
+    "jsr:@sapling/router@^0.0.20": "0.0.20",
     "jsr:@sapling/sapling@*": "0.0.18",
     "jsr:@sapling/sapling@^0.0.18": "0.0.18",
-    "jsr:@std/fs@^1.0.5": "1.0.5",
-    "jsr:@std/media-types@^1.0.3": "1.0.3",
+    "jsr:@std/fs@^1.0.5": "1.0.6",
+    "jsr:@std/media-types@^1.0.3": "1.1.0",
     "jsr:@std/path@^1.0.7": "1.0.8",
+    "jsr:@std/path@^1.0.8": "1.0.8",
     "npm:@unocss/core@0.64": "0.64.0",
     "npm:@unocss/preset-uno@0.64.0": "0.64.0",
     "npm:micromark-extension-gfm@3": "3.0.0",
@@ -29,12 +30,12 @@
         "npm:shiki"
       ]
     },
-    "@sapling/router@0.0.9": {
-      "integrity": "a26fe65a286fd9965fe75b9dd1acd33ecf1784119cbb1024c09ca9502db87da5",
+    "@sapling/router@0.0.20": {
+      "integrity": "c58d301404462834ec3667808c70e3aefb9a257b2058c718d5124782239abb27",
       "dependencies": [
         "jsr:@std/fs",
         "jsr:@std/media-types",
-        "jsr:@std/path"
+        "jsr:@std/path@^1.0.7"
       ]
     },
     "@sapling/sapling@0.0.18": {
@@ -45,14 +46,14 @@
         "npm:@unocss/preset-uno"
       ]
     },
-    "@std/fs@1.0.5": {
-      "integrity": "41806ad6823d0b5f275f9849a2640d87e4ef67c51ee1b8fb02426f55e02fd44e",
+    "@std/fs@1.0.6": {
+      "integrity": "42b56e1e41b75583a21d5a37f6a6a27de9f510bcd36c0c85791d685ca0b85fa2",
       "dependencies": [
-        "jsr:@std/path"
+        "jsr:@std/path@^1.0.8"
       ]
     },
-    "@std/media-types@1.0.3": {
-      "integrity": "b12d30a7852f7578f4d210622df713bbfd1cbdd9b4ec2eaf5c1845ab70bab159"
+    "@std/media-types@1.1.0": {
+      "integrity": "c9d093f0c05c3512932b330e3cc1fe1d627b301db33a4c2c2185c02471d6eaa4"
     },
     "@std/path@1.0.8": {
       "integrity": "548fa456bb6a04d3c1a1e7477986b6cffbce95102d0bb447c67c4ee70e0364be"
@@ -1466,7 +1467,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@sapling/markdown@^0.0.3",
-      "jsr:@sapling/router@^0.0.9",
+      "jsr:@sapling/router@^0.0.20",
       "jsr:@sapling/sapling@^0.0.18",
       "npm:unocss@0.64"
     ]
