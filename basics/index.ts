@@ -22,6 +22,10 @@ router.setNotFoundHandler(async (c) => c.html(await NotFoundLayout()));
 
 Deno.serve({
   port: 8080,
-  onListen: () => console.log("Server is running on http://localhost:8080"),
+  onListen: () =>
+    console.log(
+      `\nSapling Server is running on %chttp://localhost:8080\n`,
+      "color: green; font-weight: bold"
+    ),
   handler: router.fetch,
 });
