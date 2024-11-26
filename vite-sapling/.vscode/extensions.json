@@ -1,4 +1,3 @@
 {
-  "recommendations": ["denoland.vscode-deno"],
-  "deno.enable": true,
+  "recommendations": ["denoland.vscode-deno"]
 }
