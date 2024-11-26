@@ -9,7 +9,7 @@ app.get("/", async (req, res) => {
     head: html`<title>Hello World 🌍</title>`,
     children: html`
       <div
-        class="flex flex-col justify-center items-center h-screen gap-4 text-center"
+        class="px-12 flex flex-col justify-center items-center h-screen gap-4 text-center"
       >
         <h1 class="text-6xl font-bold">Hello World 🌍</h1>
         <p class="text-2xl">
