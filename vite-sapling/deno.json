@@ -1,0 +1,18 @@
+{
+  "tasks": {
+    "dev:vite": " deno run -A npm:vite build --watch",
+    "dev:sapling": "ENV=development deno run -A --watch index.ts",
+    "dev": "deno task dev:vite & deno task dev:sapling",
+    "build": "deno run -A npm:vite build",
+    "preview": "deno run -A npm:vite preview"
+  },
+  "compilerOptions": {
+    "lib": ["ES2020", "DOM", "DOM.Iterable"]
+  },
+  "imports": {
+    "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",
+    "canvas-confetti": "npm:canvas-confetti@^1.9.3",
+    "vite": "npm:vite@^5.4.9"
+  },
+  "nodeModulesDir": "auto"
+}
