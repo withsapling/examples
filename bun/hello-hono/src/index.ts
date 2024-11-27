@@ -1,9 +1,9 @@
-import { Hono } from "@hono/hono";
+import { Hono, Context } from "@hono/hono";
 import { html, Layout } from "@sapling/sapling";
 
 const app = new Hono();
 
-app.get("/", async (c) => {
+app.get("/", async (c: Context) => {
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
@@ -13,9 +13,9 @@ app.get("/", async (c) => {
         <h1 class="text-6xl font-bold">Hello World 🌍</h1>
         <p class="text-2xl">
           This is a site using
-          <a class="text-blue-500" href="https://sapling.build">Sapling</a>,
-          <a class="text-blue-500" href="https://hono.dev">Hono</a>, and
-          <a class="text-blue-500" href="https://bun.sh">Bun</a>
+          <a class="text-blue-500 hover:underline" href="https://sapling.build">Sapling</a>,
+          <a class="text-blue-500 hover:underline" href="https://hono.dev">Hono</a>, and
+          <a class="text-blue-500 hover:underline" href="https://bun.sh">Bun</a>
         </p>
         <p class="text-base font-mono text-gray-500">
           It was server rendered at ${time}
