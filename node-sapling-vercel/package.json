@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "vercel dev",
+    "deploy": "vercel",
+    "prod": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.0.22"
+  },
+  "devDependencies": {
+    "vercel": "^32.4.1"
+  }
+}

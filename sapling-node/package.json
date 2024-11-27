@@ -1,0 +1,17 @@
+{
+  "name": "sapling-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.0.22"
+  }
+}
