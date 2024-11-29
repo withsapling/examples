@@ -10,10 +10,9 @@
       "node"
     ],
     "outDir": "dist",
-    "rootDir": "./"
+    "rootDir": "src"
   },
   "include": [
-    "src/**/*",
-    "static/**/*"
+    "src/**/*"
   ]
 }
