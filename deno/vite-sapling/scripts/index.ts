@@ -1,16 +1,6 @@
 // this is a node module that vite will bundle
 import confetti from "canvas-confetti";
 
-globalThis.onload = () => {
-  confetti({
-    spread: 180,
-    particleCount: 200,
-    origin: {
-      y: 0.5,
-    },
-  });
-};
-
 let count = 0;
 
 console.log("index");
