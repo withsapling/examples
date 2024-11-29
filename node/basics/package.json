@@ -1,0 +1,21 @@
+{
+  "name": "my-app",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "clean": "rm -rf dist",
+    "copy-static": "cp -r static dist",
+    "prebuild": "npm run clean && npm run copy-static",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.5",
+    "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.0.22",
+    "unocss": "^0.64.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "tsx": "^4.7.1",
+    "typescript": "^5.6.3"
+  }
+}
