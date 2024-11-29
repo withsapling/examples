@@ -1,6 +1,7 @@
 import { serve } from "@hono/node-server";
 import { Sapling, serveStatic } from "@sapling/sapling";
 import { Home } from "./pages/Home.js";
+import NotFoundLayout from "./layouts/NotFoundLayout.js";
 
 const site = new Sapling();
 
@@ -17,8 +18,10 @@ site.get("/*", serveStatic({
   dev: true,
 }));
 
+// Set the not found handler last to catch all 404s
+site.setNotFoundHandler(async (c) => c.html(await NotFoundLayout()));
 
-const port = 3000;
+const port = 8080;
 console.log(`Server is running on http://localhost:${port}`);
 
 serve({

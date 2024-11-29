@@ -7,7 +7,7 @@ export function BaseHead({
   return html`
     <title>${title}</title>
     <meta name="description" content="${description}" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta property="og:image" content="/social.png" />
     <style>
       :root {
