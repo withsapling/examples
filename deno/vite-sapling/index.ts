@@ -8,6 +8,7 @@ site.get("/", async (c) => {
   return c.html(
     await Layout({
       head: html`
+        <link rel="stylesheet" href="/main.css" />
         <script type="module" src="/scripts/index.js" defer></script>
       `,
       children: html`
