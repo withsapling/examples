@@ -6,7 +6,6 @@ export default defineConfig({
   plugins: [deno()],
   build: {
     target: 'esnext',
-    outDir: './static/scripts',
     emptyOutDir: true,
     rollupOptions: {
       input: {
