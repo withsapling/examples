@@ -8,7 +8,6 @@ export default defineConfig({
     target: 'esnext',
     outDir: './static/scripts',
     emptyOutDir: true,
-    watch: {},
     rollupOptions: {
       input: {
         index: './scripts/index.ts',
