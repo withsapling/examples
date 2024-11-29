@@ -11,6 +11,7 @@
   },
   "imports": {
     "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.0.26",
     "canvas-confetti": "npm:canvas-confetti@^1.9.3",
     "vite": "npm:vite@^5.4.9"
   },

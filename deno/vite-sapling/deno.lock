@@ -4,8 +4,10 @@
     "jsr:@hono/hono@^4.6.7": "4.6.12",
     "jsr:@sapling/router@*": "0.0.20",
     "jsr:@sapling/sapling@*": "0.0.19",
+    "jsr:@sapling/sapling@^0.0.26": "0.0.26",
     "jsr:@std/fs@^1.0.5": "1.0.6",
     "jsr:@std/media-types@^1.0.3": "1.1.0",
+    "jsr:@std/media-types@^1.1.0": "1.1.0",
     "jsr:@std/path@^1.0.7": "1.0.8",
     "jsr:@std/path@^1.0.8": "1.0.8",
     "npm:@deno/vite-plugin@1": "1.0.0_vite@5.4.11",
@@ -14,6 +16,7 @@
     "npm:@unocss/preset-uno@~0.64.1": "0.64.1",
     "npm:canvas-confetti@^1.9.3": "1.9.3",
     "npm:unocss@~0.64.1": "0.64.1_vite@5.4.11",
+    "npm:urlpattern-polyfill@10": "10.0.0",
     "npm:vite@*": "5.4.11",
     "npm:vite@^5.4.9": "5.4.11"
   },
@@ -25,7 +28,7 @@
       "integrity": "c58d301404462834ec3667808c70e3aefb9a257b2058c718d5124782239abb27",
       "dependencies": [
         "jsr:@std/fs",
-        "jsr:@std/media-types",
+        "jsr:@std/media-types@^1.0.3",
         "jsr:@std/path@^1.0.7"
       ]
     },
@@ -37,6 +40,17 @@
         "npm:@unocss/preset-typography",
         "npm:@unocss/preset-uno",
         "npm:unocss"
+      ]
+    },
+    "@sapling/sapling@0.0.26": {
+      "integrity": "aeb0760b74826439b3484d157649776e598c023e680ac83ae15cd5da17f2e6e6",
+      "dependencies": [
+        "jsr:@hono/hono",
+        "jsr:@std/media-types@^1.1.0",
+        "jsr:@std/path@^1.0.8",
+        "npm:@unocss/core",
+        "npm:@unocss/preset-uno",
+        "npm:urlpattern-polyfill"
       ]
     },
     "@std/fs@1.0.6": {
@@ -992,6 +1006,9 @@
         "vite"
       ]
     },
+    "urlpattern-polyfill@10.0.0": {
+      "integrity": "sha512-H/A06tKD7sS1O1X2SshBVeA5FLycRpjqiBeqGKmBwBDBy28EnRjORxTNe269KSSr5un5qyWi1iL61wLxpd+ZOg=="
+    },
     "vite@5.4.11": {
       "integrity": "sha512-c7jFQRklXua0mTzneGW9QVyxFjUgwcihC4bXEtujIo2ouWCe1Ajt/amn2PCxYnhYfd5k09JX3SB7OYWFKYqj8Q==",
       "dependencies": [
@@ -1020,6 +1037,7 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@sapling/sapling@^0.0.26",
       "npm:@deno/vite-plugin@1",
       "npm:canvas-confetti@^1.9.3",
       "npm:vite@^5.4.9"

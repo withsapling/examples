@@ -1,9 +1,8 @@
-import { Layout, html } from "jsr:@sapling/sapling";
-import { Router, serveStatic } from "jsr:@sapling/router";
+import { Sapling, Layout, html, serveStatic } from "@sapling/sapling";
 
-const router = new Router();
+const site = new Sapling();
 
-router.get("/", async (c) => {
+site.get("/", async (c) => {
   const time = new Date().toLocaleTimeString();
 
   return c.html(
@@ -53,7 +52,7 @@ router.get("/", async (c) => {
   );
 });
 
-router.get(
+site.get(
   "/*",
   serveStatic({
     directory: "./static",
@@ -63,6 +62,10 @@ router.get(
 
 Deno.serve({
   port: 8080,
-  onListen: () => console.log(`\nSapling Server is running on %chttp://localhost:8080\n`, "color: green"),
-  handler: router.fetch,
+  onListen: () =>
+    console.log(
+      `\nSapling Server is running on %chttp://localhost:8080\n`,
+      "color: green"
+    ),
+  handler: site.fetch,
 });
