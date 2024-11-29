@@ -5,7 +5,7 @@ export async function Home() {
     head: html`
     <link rel="stylesheet" href="styles.css" />
 `,
-    children: await html`
+    children: html`
     <header>
     <h1>
       <a href="https://motion.dev" target="_blank">
