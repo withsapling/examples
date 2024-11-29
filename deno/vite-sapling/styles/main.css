@@ -7,7 +7,6 @@ body {
   background-size: 24px 24px;
 }
 
-
 .border-beam-container {
   position: relative;
   border-radius: 0.75rem;
@@ -46,7 +45,7 @@ body {
   position: absolute;
   width: calc(var(--size, 200) * 1px);
   aspect-ratio: 1;
-  background: linear-gradient(to left, var(--color-from, #ffaa40), var(--color-to, #9c40ff), transparent);
+  background: linear-gradient(to left, var(--color-from, #40ff8f), var(--color-to, #4075ff), transparent);
   offset-anchor: calc(var(--anchor, 90) * 1%) 50%;
   offset-path: rect(0 auto auto 0 round calc(var(--size, 200) * 1px));
   animation: border-beam var(--duration, 15s) linear infinite;
