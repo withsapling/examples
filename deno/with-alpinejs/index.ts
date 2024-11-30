@@ -17,8 +17,8 @@ site.get("/", async (c) =>
           <div
             class="px-12 max-w-xl text-center flex flex-col items-center justify-center gap-6"
           >
-            <h1 class="text-5xl font-bold">
-              Sapling with
+            <h1 class="text-3xl font-bold">
+              <a class="underline" href="https://sapling.build" target="_blank">Sapling</a> 🤝
               <a class="underline" href="https://alpinejs.dev/" target="_blank"
                 >Alpine.js</a
               >

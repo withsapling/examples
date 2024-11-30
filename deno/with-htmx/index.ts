@@ -25,7 +25,7 @@ site.get("/", async (c) => c.html(await Layout({
   children: html`
   <div class="flex flex-col items-center justify-center h-screen">
     <div class="px-12 max-w-xl text-center flex flex-col items-center justify-center gap-6">
-    <h1 class="text-5xl font-bold">Sapling with <a class="underline" href="https://htmx.org" target="_blank">htm<span class="text-blue-500">x</span></a></h1>
+    <h1 class="text-3xl font-bold"><a class="underline" href="https://sapling.build" target="_blank">Sapling</a> 🤝 <a class="underline" href="https://htmx.org" target="_blank">htm<span class="text-blue-500">x</span></a></h1>
     <p>The button below will POST a click via AJAX to the server and swap the button with the response from the server.</p>
      <!-- have a button POST a click via AJAX -->
      <button class="bg-blue-500 text-white px-4 py-2 rounded" hx-post="/clicked" hx-swap="outerHTML">
