@@ -1,0 +1,24 @@
+{
+  "name": "my-app",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development tsx watch src/index.ts",
+    "clean": "rm -rf dist",
+    "copy-static": "cp -r static dist/static",
+    "prebuild": "npm run clean",
+    "build": "tsc && npm run copy-static",
+    "start": "NODE_ENV=production node dist/index.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.5",
+    "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.0.26",
+    "canvas-confetti": "^1.9.3",
+    "unocss": "^0.64.1",
+    "vite": "^5.4.11"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "tsx": "^4.7.1",
+    "typescript": "^5.6.3"
+  }
+}
