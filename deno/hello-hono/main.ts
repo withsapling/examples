@@ -1,9 +1,9 @@
-import { Hono } from "@hono/hono";
+import { Hono, type Context } from "@hono/hono";
 import { html, Layout } from "@sapling/sapling";
 
 const app = new Hono();
 
-app.get("/", async (c) => {
+app.get("/", async (c: Context) => {
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
