@@ -24,7 +24,7 @@ site.get("/", async (c) => c.html(await Layout({
   bodyClass: "@dark:bg-[#1f1f1f] @dark:text-white",
   children: html`
   <div class="flex flex-col items-center justify-center h-screen">
-    <div class="max-w-xl text-center flex flex-col items-center justify-center gap-4">
+    <div class="px-12 max-w-xl text-center flex flex-col items-center justify-center gap-6">
     <h1 class="text-5xl font-bold">Sapling with <a class="underline" href="https://htmx.org" target="_blank">htm<span class="text-blue-500">x</span></a></h1>
     <p>The button below will POST a click via AJAX to the server and swap the button with the response from the server.</p>
      <!-- have a button POST a click via AJAX -->
