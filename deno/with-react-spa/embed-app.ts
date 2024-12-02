@@ -25,16 +25,6 @@ const buildAndEmbed = async () => {
     throw new Error("Build failed");
   }
 
-  // // rename index.html to app.html
-  // const renameProcess = new Deno.Command("mv", {
-  //   args: ["dist/index.html", "dist/app.html"],
-  // });
-  // const renameOutput = await renameProcess.output();
-
-  // if (!renameOutput.success) {
-  //   throw new Error("Failed to rename index.html to app.html");
-  // }
-
   // Copy dist folder contents to static directory
   const copyProcess = new Deno.Command("cp", {
     args: ["-r", "dist/.", "../static/app/"],
@@ -44,8 +34,6 @@ const buildAndEmbed = async () => {
   if (!copyOutput.success) {
     throw new Error("Failed to copy dist files to static directory");
   }
-
-
 
   // Change back to original directory
   Deno.chdir("..");
