@@ -44,20 +44,22 @@ site.get("/page", async (c) => {
 });
 
 
-
+// serve static files including the React app at static/app/
 site.get("/*", serveStatic({
   directory: "./static",
   dev: true,
 }));
 
 
-site.setNotFoundHandler((c) => {
-  // if the path starts with /app and is a 404, redirect to /app
+site.setNotFoundHandler(async (c) => {
+  // if the path starts with /app read the app's index.html and serve it
+  // the client side router should have its own 404 handler
   const url = new URL(c.req.url);
   const pathname = url.pathname;
-
   if (pathname.startsWith("/app")) {
-    return c.redirect("/app");
+    return c.html(
+      await Deno.readTextFile("./static/app/index.html")
+    );
   }
   // otherwise, redirect to home
   return c.redirect("/");
