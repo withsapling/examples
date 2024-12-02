@@ -2,6 +2,16 @@
 
 // Change directory to app folder, build the React app, and copy dist files to static
 const buildAndEmbed = async () => {
+  // Delete /static/app folder
+  const deleteProcess = new Deno.Command("rm", {
+    args: ["-rf", "./static/app"],
+  });
+  const deleteOutput = await deleteProcess.output();
+
+  if (!deleteOutput.success) {
+    throw new Error("Failed to delete app folder");
+  }
+
   // Change to app directory
   Deno.chdir("./app");
 
@@ -15,19 +25,19 @@ const buildAndEmbed = async () => {
     throw new Error("Build failed");
   }
 
-  // rename index.html to app.html
-  const renameProcess = new Deno.Command("mv", {
-    args: ["dist/index.html", "dist/app.html"],
-  });
-  const renameOutput = await renameProcess.output();
+  // // rename index.html to app.html
+  // const renameProcess = new Deno.Command("mv", {
+  //   args: ["dist/index.html", "dist/app.html"],
+  // });
+  // const renameOutput = await renameProcess.output();
 
-  if (!renameOutput.success) {
-    throw new Error("Failed to rename index.html to app.html");
-  }
+  // if (!renameOutput.success) {
+  //   throw new Error("Failed to rename index.html to app.html");
+  // }
 
   // Copy dist folder contents to static directory
   const copyProcess = new Deno.Command("cp", {
-    args: ["-r", "dist/.", "../static/"],
+    args: ["-r", "dist/.", "../static/app/"],
   });
   const copyOutput = await copyProcess.output();
 

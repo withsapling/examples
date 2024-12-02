@@ -25,6 +25,10 @@ site.get("/*", serveStatic({
   dev: true,
 }));
 
+site.setNotFoundHandler((c) => {
+  return c.redirect("/");
+});
+
 Deno.serve({
   port: 8080,
   onListen: () => console.log("Server is running on http://localhost:8080"),
