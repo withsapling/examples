@@ -31,6 +31,6 @@ jobs:
         with:
           project: "jaydanurwin-examples-17"
           entrypoint: "https://deno.land/std@0.217.0/http/file_server.ts"
-          root: ""
-          include: index.ts, static/*
-          exclude: app/*
+          root: "with-react-app/"
+          
+          
