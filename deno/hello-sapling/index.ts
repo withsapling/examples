@@ -72,8 +72,8 @@ site.get("/:name", async (c) => {
               >Sapling</a
             >
             and
-            <a class="text-blue-500 hover:underline" href="https://nodejs.org"
-              >Node.js</a
+            <a class="text-blue-500 hover:underline" href="https://deno.com"
+              >Deno</a
             >
           </p>
           <p class="text-base font-mono text-gray-500">
