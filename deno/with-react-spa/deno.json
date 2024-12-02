@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "dev": "deno run -A --watch index.ts",
+    "build": "deno run -A embed-app.ts"
+  },
+  "imports": {
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.0.27"
+  }
+}
