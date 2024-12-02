@@ -1,6 +1,6 @@
-# Sapling Alpine.js Template
+# Sapling with Web Components
 
-Alpine.js and Sapling 
+Sapling with Web Components
 
 ## Usage
 
