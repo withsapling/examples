@@ -30,7 +30,7 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "jaydanurwin-examples-17"
-          entrypoint: "https://deno.land/std@0.217.0/http/file_server.ts"
-          root: "with-react-app/"
+          entrypoint: "index.ts"
+          root: "deno/with-react-app/"
           
           
