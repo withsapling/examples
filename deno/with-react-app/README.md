@@ -8,9 +8,9 @@ This same concept could be translated to any other SPA setup with Vite.
 
 1. You could use Sapling for your marketing site because of the SEO and performance benefits but embed a React App for the dashboard/SaaS part of your product.
 
-2. You might want to embed a CMS or other client side rendered app inside of a Sapling project.
+2. You might want to embed a CMS or an internal tool that is client side rendered inside of a Sapling project.
 
-3. You want to use Sapling for your API and then embed a React App for the frontend.
+3. You want to use Sapling for your API and a couple of SSR pages and then serve a React App on the frontend.
 
 ## Usage
 
