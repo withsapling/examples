@@ -1,0 +1,9 @@
+{
+  "tasks": {
+    "dev": "deno run -A --env-file --watch index.ts"
+  },
+  "imports": {
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.0.26",
+    "openai": "npm:openai@^4.74.0"
+  }
+}
