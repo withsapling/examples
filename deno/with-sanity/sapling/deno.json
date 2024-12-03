@@ -6,6 +6,7 @@
   "imports": {
     "@portabletext/to-html": "npm:@portabletext/to-html@^2.0.13",
     "@sanity/client": "npm:@sanity/client@^6.23.0",
+    "@sanity/image-url": "npm:@sanity/image-url@^1.1.0",
     "@sapling/sapling": "jsr:@sapling/sapling@^0.0.26",
     "unocss": "npm:unocss@^0.64.0"
   },

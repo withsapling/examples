@@ -8,6 +8,7 @@
     "jsr:@std/path@^1.0.8": "1.0.8",
     "npm:@portabletext/to-html@^2.0.13": "2.0.13",
     "npm:@sanity/client@^6.23.0": "6.23.0",
+    "npm:@sanity/image-url@^1.1.0": "1.1.0",
     "npm:@types/node@*": "22.5.4",
     "npm:@unocss/core@0.64": "0.64.0",
     "npm:@unocss/preset-uno@0.64.0": "0.64.0",
@@ -352,6 +353,9 @@
         "event-source-polyfill",
         "eventsource"
       ]
+    },
+    "@sanity/image-url@1.1.0": {
+      "integrity": "sha512-JHumVRxzzaZAJyOimntdukA9TjjzsJiaiq/uUBdTknMLCNvtM6KQ5OCp6W5fIdY78uyFxtQjz+MPXwK8WBIxWg=="
     },
     "@types/estree@1.0.6": {
       "integrity": "sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw=="
@@ -1263,6 +1267,7 @@
       "jsr:@sapling/sapling@^0.0.26",
       "npm:@portabletext/to-html@^2.0.13",
       "npm:@sanity/client@^6.23.0",
+      "npm:@sanity/image-url@^1.1.0",
       "npm:unocss@0.64"
     ]
   }
