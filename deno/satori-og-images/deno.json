@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "dev": "deno run -A --watch index.ts"
+  },
+  "imports": {
+    "@resvg/resvg-js": "npm:@resvg/resvg-js@^2.6.2",
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.0.26",
+    "satori": "npm:satori@^0.12.0"
+  }
+}
