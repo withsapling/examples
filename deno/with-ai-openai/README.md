@@ -1,4 +1,4 @@
-# Sapling with AI
+# Sapling with OpenAI
 
 A simple Sapling app that uses OpenAI's API to generate responses to messages.
 
