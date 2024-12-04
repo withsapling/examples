@@ -1,0 +1,17 @@
+{
+  "tasks": {
+    "dev": "deno run -A --env-file --watch index.ts"
+  },
+  "imports": {
+    "@react-email/components": "npm:@react-email/components@^0.0.29",
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.0.26",
+    "react": "npm:react@^18.3.1",
+    "react-dom": "npm:react-dom@^18.3.1",
+    "resend": "npm:resend@^4.0.1"
+  },
+  "compilerOptions": {
+    "jsx": "react",
+    "jsxFactory": "React.createElement",
+    "jsxFragmentFactory": "React.Fragment"
+  }
+}
