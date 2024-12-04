@@ -23,7 +23,7 @@ site.get("/", async (c) => {
                 This is a site using
                 <a class="text-blue-500 hover:underline" href="https://sapling.build">Sapling</a>,
                 <a class="text-blue-500 hover:underline" href="https://vitejs.dev">Vite</a>, and
-                <a class="text-blue-500 hover:underline" href="https://deno.com">Deno</a>
+                <a class="text-blue-500 hover:underline" href="https://nodejs.org">Node.js</a>
               </p>
               <p class="text-base font-mono text-gray-500">
                 It was server rendered at ${time}
