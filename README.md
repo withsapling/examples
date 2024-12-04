@@ -35,6 +35,7 @@
 - [With Resend](https://github.com/withsapling/examples/tree/main/deno/with-resend)
 - [With Sanity](https://github.com/withsapling/examples/tree/main/deno/with-sanity)
 - [With Web Components](https://github.com/withsapling/examples/tree/main/deno/with-web-components)
+- [With Deno KV](https://github.com/withsapling/examples/tree/main/deno/with-deno-kv)
 
 ## Node.js
 
