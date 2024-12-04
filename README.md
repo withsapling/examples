@@ -1,5 +1,12 @@
 # Sapling Examples
 
+## Table of Contents
+
+- [Deno Examples](#deno)
+- [Node.js Examples](#nodejs)
+- [Cloudflare Workers Examples](#cloudflare-workers)
+- [Bun Examples](#bun)
+
 ## Deno
 
 [View Deno Examples](https://github.com/withsapling/examples/tree/main/deno)
