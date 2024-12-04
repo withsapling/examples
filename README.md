@@ -58,6 +58,8 @@
 
 ## Bun
 
+Note: Because Bun has full Node.js compatibility, you can use just about any Node.js example with Bun.
+
 [View Bun Examples](https://github.com/withsapling/examples/tree/main/bun)
 
 - [Hello Hono](https://github.com/withsapling/examples/tree/main/bun/hello-hono)
