@@ -20,7 +20,7 @@
 - [Hello Hono](https://github.com/withsapling/examples/tree/main/deno/hello-hono)
 - [Hello Oak](https://github.com/withsapling/examples/tree/main/deno/hello-oak)
 - [Hello Sapling](https://github.com/withsapling/examples/tree/main/deno/hello-sapling)
-- [Nested Router](https://github.com/withsapling/examples/tree/main/deno/nested-router)
+- [Nested Router](https://github.com/withsapling/examples/tree/main/deno/sapling-nested-router)
 - [Satori OG Images](https://github.com/withsapling/examples/tree/main/deno/satori-og-images)
 - [Single File Landing Page](https://github.com/withsapling/examples/tree/main/deno/single-file-landing-page)
 - [Vite + Sapling](https://github.com/withsapling/examples/tree/main/deno/vite-sapling)
