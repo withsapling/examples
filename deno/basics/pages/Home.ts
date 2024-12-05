@@ -5,7 +5,7 @@ export async function Home() {
   return await Layout({
     head: html`
     <!-- Ah vanilla JavaScript is so refreshing -->
-    <script type="module" defer>
+    <script type="module">
       let count = 0;
       document.querySelector("#countButton").addEventListener("click", () => {
         count++;
