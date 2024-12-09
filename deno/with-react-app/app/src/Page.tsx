@@ -8,10 +8,8 @@ export default function Page() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const formData = new FormData(e.target as HTMLFormElement);
-    // this is hitting the Sapling api for the hello response
-    const apiUrl = import.meta.env.DEV ? "http://localhost:8080" : "MY_API_URL";
-    // you would obviously want to handle siwt
-    const response = await fetch(`${apiUrl}/hello`, {
+    // Using the proxy in development, direct URL in production
+    const response = await fetch(`/api/hello`, {
       method: "POST",
       body: formData,
     });
