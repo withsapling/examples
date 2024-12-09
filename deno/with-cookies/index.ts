@@ -4,7 +4,7 @@ import { getCookie, setCookie } from "jsr:@sapling/sapling/cookies";
 const site = new Sapling();
 
 site.get("/", async (c: Context) => {
-  // set a cookie with a key of "hello" and a value of "world" with a max age of 24 hours
+  // send back a cookie with a key of "hello" and a value of "world" with a max age of 24 hours
   setCookie(c, "hello", "World", {
     // max age of 24 hours
     maxAge: 60 * 60 * 24,
