@@ -1,8 +1,11 @@
-import { Sapling, Layout, html, serveStatic } from "jsr:@sapling/sapling";
+import { Sapling, Layout, html, serveStatic, Context } from "jsr:@sapling/sapling";
+import { cors } from "jsr:@sapling/sapling/cors";
 
 const site = new Sapling();
 
-site.get("/", async (c) => {
+site.use(cors());
+
+site.get("/", async (c: Context) => {
   return c.html(
     await Layout({
       head: html` <title>Hello World 🌍</title>`,
@@ -25,7 +28,13 @@ site.get("/", async (c) => {
   );
 });
 
-site.get("/page", async (c) => {
+site.post("/hello", async (c: Context) => {
+  const formData = await c.req.formData();
+  const name = formData.get("name") as string;
+  return c.json({ message: `Hello, ${name}!` });
+});
+
+site.get("/page", async (c: Context) => {
   return c.html(
     await Layout({
       head: html` <title>Sapling Page</title>`,

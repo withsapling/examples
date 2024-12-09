@@ -1,9 +1,9 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@hono/hono@^4.6.7": "4.6.12",
-    "jsr:@sapling/sapling@*": "0.0.27",
-    "jsr:@sapling/sapling@^0.0.27": "0.0.27",
+    "jsr:@hono/hono@^4.6.7": "4.6.13",
+    "jsr:@sapling/sapling@*": "0.0.40",
+    "jsr:@sapling/sapling@^0.0.40": "0.0.40",
     "jsr:@std/media-types@^1.1.0": "1.1.0",
     "jsr:@std/path@^1.0.8": "1.0.8",
     "npm:@unocss/core@0.64": "0.64.1",
@@ -12,11 +12,11 @@
     "npm:urlpattern-polyfill@10": "10.0.0"
   },
   "jsr": {
-    "@hono/hono@4.6.12": {
-      "integrity": "fa0b97fa7c3292f0d9957109ac07a475fe485868795b71b8e3114c284152cdb5"
+    "@hono/hono@4.6.13": {
+      "integrity": "198970fc6facf71a88ee57aa1ed32143b56bcb0f842fa965ca3ee7d6fdd21a8e"
     },
-    "@sapling/sapling@0.0.27": {
-      "integrity": "70e0d461288b9a45783b9ce9395ff1cff1b64ab34c26c48be0a604593e864a74",
+    "@sapling/sapling@0.0.40": {
+      "integrity": "6bd9977f727b0b424192a5b6a2800a25708829be872a88c7e3b3bfaf7a06a3cf",
       "dependencies": [
         "jsr:@hono/hono",
         "jsr:@std/media-types",
@@ -117,7 +117,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@sapling/sapling@^0.0.27"
+      "jsr:@sapling/sapling@^0.0.40"
     ]
   }
 }
