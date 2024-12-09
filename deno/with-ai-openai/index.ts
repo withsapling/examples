@@ -4,7 +4,7 @@ import OpenAI from "npm:openai";
 const site = new Sapling();
 
 site.post("/ai", async (c: Context) => {
-  const data = await c.formData();
+  const data = await c.req.formData();
   const message = data.get("message");
   console.log(message);
   const openai = new OpenAI({

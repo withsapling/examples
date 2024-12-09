@@ -1,12 +1,12 @@
-import { Sapling, Layout, html } from "jsr:@sapling/sapling";
+import { Sapling, Layout, html, Context } from "@sapling/sapling";
 
 const site = new Sapling();
 
 const kv = await Deno.openKv();
 
 
-site.post("/items", async (c) => {
-  const form = await c.formData();
+site.post("/items", async (c: Context) => {
+  const form = await c.req.formData();
   const name = form.get("name")?.toString();
   const email = form.get("email")?.toString();
   const message = form.get("message")?.toString();
@@ -23,7 +23,7 @@ site.post("/items", async (c) => {
   return c.redirect("/");
 });
 
-site.post("/items/:id/delete", async (c) => {
+site.post("/items/:id/delete", async (c: Context) => {
   const id = c.req.param('id');
   const key = ["items", id];
   console.log(key);
@@ -31,7 +31,7 @@ site.post("/items/:id/delete", async (c) => {
   return c.redirect("/");
 });
 
-site.get("/create-item", async (c) => {
+site.get("/create-item", async (c: Context) => {
   return c.html(
     await Layout({
       head: html` <title>Create Item</title>`,
@@ -74,7 +74,7 @@ site.get("/create-item", async (c) => {
   );
 });
 
-site.get("/", async (c) => {
+site.get("/", async (c: Context) => {
   const items: any[] = [];
   for await (const item of kv.list({ prefix: ["items"] })) {
     items.push(item.value);

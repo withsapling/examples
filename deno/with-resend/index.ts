@@ -4,7 +4,7 @@ import EmailTemplate from "./Email.tsx";
 const site = new Sapling();
 
 site.post("/resend", async (c: Context) => {
-  const form = await c.formData();
+  const form = await c.req.formData();
   const email = form.get("email")?.toString();
 
   if (!email) {
@@ -27,7 +27,7 @@ site.post("/resend", async (c: Context) => {
 
 
 
-site.get("/", async (c) => {
+site.get("/", async (c: Context) => {
   return c.html(
     await Layout({
       head: html` <title>Sapling & Resend ✉️</title>`,

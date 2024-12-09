@@ -3,7 +3,7 @@
     "dev": "deno run -A --env-file --watch index.ts"
   },
   "imports": {
-    "@sapling/sapling": "jsr:@sapling/sapling@^0.0.26",
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.0.39",
     "openai": "npm:openai@^4.74.0"
   }
 }
