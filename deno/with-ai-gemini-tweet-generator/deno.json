@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "dev": "deno run -A --env-file --watch index.ts"
+  },
+  "imports": {
+    "@google/generative-ai": "npm:@google/generative-ai@^0.21.0",
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.1.2",
+    "openai": "npm:openai@^4.74.0"
+  }
+}
