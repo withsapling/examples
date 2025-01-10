@@ -1,11 +1,11 @@
-import { Sapling, Layout, html, type Context } from "jsr:@sapling/sapling";
+import { Sapling, Layout, html, type Context, type Next } from "jsr:@sapling/sapling";
 
 const site = new Sapling();
 
 // This is a middleware that sets the Cache-Control header
 // This is useful for static assets that don't change often
 // It's a good idea to set this for all static assets, but it's not necessary for all pages
-const staticContentMiddleware = (c: Context, next: () => Promise<Response | null>) => {
+const staticContentMiddleware = (c: Context, next: Next) => {
   // Cache for 1 day, but allow serving stale content for up to 1 week while revalidating in the background
   c.res.headers.set("Cache-Control", "public, max-age=86400, stale-while-revalidate=604800");
   return next();
@@ -65,7 +65,7 @@ site.get("/", staticContentMiddleware, async (c: Context) => {
   );
 });
 
-site.get("/:name", async (c) => {
+site.get("/:name", async (c: Context) => {
   const name = c.req.param("name");
   const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
   const time = new Date().toLocaleTimeString();
