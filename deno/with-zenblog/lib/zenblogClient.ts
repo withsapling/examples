@@ -1,6 +1,12 @@
 import { createZenblogClient } from "zenblog";
 
-const zenblog = createZenblogClient({ blogId: Deno.env.get("ZENBLOG_ID") });
+const blogId = Deno.env.get("ZENBLOG_ID");
+
+if (!blogId) {
+  throw new Error("ZENBLOG_ID is not set in .env file");
+}
+
+const zenblog = createZenblogClient({ blogId });
 
 // get all posts
 export async function getPosts() {

@@ -1,7 +1,7 @@
 {
   "tasks": {
-    "start": "deno run -A --watch index.ts",
-    "dev": "ENV=development deno run -A --watch index.ts"
+    "start": "deno run --env-file=.env -A --watch index.ts",
+    "dev": "ENV=development deno run --env-file=.env -A --watch index.ts"
   },
   "imports": {
     "@portabletext/to-html": "npm:@portabletext/to-html@^2.0.13",
