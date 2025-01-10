@@ -34,7 +34,9 @@
 - [With React App](https://github.com/withsapling/examples/tree/main/deno/with-react-app)
 - [With Resend](https://github.com/withsapling/examples/tree/main/deno/with-resend)
 - [With Sanity](https://github.com/withsapling/examples/tree/main/deno/with-sanity)
+- [With Static Caching Headers](https://github.com/withsapling/examples/tree/main/deno/with-static-caching-headers)
 - [With Web Components](https://github.com/withsapling/examples/tree/main/deno/with-web-components)
+- [With Zenblog](https://github.com/withsapling/examples/tree/main/deno/with-zenblog)
 - [With Deno KV](https://github.com/withsapling/examples/tree/main/deno/with-deno-kv)
 
 ## Node.js
