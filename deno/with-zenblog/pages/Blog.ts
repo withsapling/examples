@@ -1,7 +1,7 @@
 import { html } from "@sapling/sapling";
 import Layout from "../layouts/Layout.ts";
 import { BlogPostCard } from "../components/BlogPostCard.ts";
-import { getPosts } from "../lib/sanityClient.ts";
+import { getPosts } from "../lib/zenblogClient.ts";
 
 export async function Blog() {
   const { data: posts } = await getPosts();

@@ -1,6 +1,6 @@
 import { createZenblogClient } from "zenblog";
 
-const zenblog = createZenblogClient({ blogId: "YOUR_ZENBLOG_ID" });
+const zenblog = createZenblogClient({ blogId: Deno.env.get("ZENBLOG_ID") });
 
 // get all posts
 export async function getPosts() {

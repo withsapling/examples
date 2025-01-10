@@ -1,6 +1,6 @@
 import { html, raw } from "@sapling/sapling";
 import Layout from "../layouts/Layout.ts";
-import { getPostBySlug } from "../lib/sanityClient.ts";
+import { getPostBySlug } from "../lib/zenblogClient.ts";
 
 interface BlogPostProps {
   params: {
