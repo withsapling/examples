@@ -16,7 +16,7 @@ site.get("/", async (c) =>
             class="px-12 max-w-xl text-center flex flex-col items-center justify-center gap-6"
           >
             <h1 class="text-3xl font-bold">
-            <a class="underline" href="https://sapling.build" target="_blank">Sapling</a> 🤝 Web Components 
+            <a class="underline" href="https://sapling.land" target="_blank">Sapling</a> 🤝 Web Components 
             </h1>
             <p>
               There are two web components below. One is a vanilla web component

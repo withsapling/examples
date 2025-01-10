@@ -21,7 +21,7 @@ site.get("/", async (c) => {
               <h1 class="text-5xl font-bold">Hello World 🌍</h1>
               <p class="text-2xl">
                 This is a site using
-                <a class="text-blue-500 hover:underline" href="https://sapling.build">Sapling</a>,
+                <a class="text-blue-500 hover:underline" href="https://sapling.land">Sapling</a>,
                 <a class="text-blue-500 hover:underline" href="https://vitejs.dev">Vite</a>, and
                 <a class="text-blue-500 hover:underline" href="https://nodejs.org">Node.js</a>
               </p>

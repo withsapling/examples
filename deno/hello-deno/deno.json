@@ -4,6 +4,6 @@
     "dev": "deno run -A --watch main.ts"
   },
   "imports": {
-    "@sapling/sapling": "jsr:@sapling/sapling@^0.0.18"
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.1.2"
   }
 }

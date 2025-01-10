@@ -16,9 +16,7 @@ site.get("/", async (c) => {
           <h1 class="text-6xl font-bold">Hello World 🌍</h1>
           <p class="text-2xl">
             This is a site using
-            <a
-              class="text-blue-500 hover:underline"
-              href="https://sapling.build"
+            <a class="text-blue-500 hover:underline" href="https://sapling.land"
               >Sapling</a
             >
             and
@@ -68,9 +66,7 @@ site.get("/:name", async (c) => {
           <h1 class="text-6xl font-bold">Hello ${capitalizedName} 🌍</h1>
           <p class="text-2xl">
             This is a site using
-            <a
-              class="text-blue-500 hover:underline"
-              href="https://sapling.build"
+            <a class="text-blue-500 hover:underline" href="https://sapling.land"
               >Sapling</a
             >
             and

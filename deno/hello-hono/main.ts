@@ -13,7 +13,7 @@ app.get("/", async (c: Context) => {
         <h1 class="text-6xl font-bold">Hello World 🌍</h1>
         <p class="text-2xl">
           This is a site using
-          <a class="text-blue-500" href="https://sapling.build">Sapling</a>,
+          <a class="text-blue-500" href="https://sapling.land">Sapling</a>,
           <a class="text-blue-500" href="https://hono.dev">Hono</a>, and
           <a class="text-blue-500" href="https://deno.com">Deno</a>
         </p>

@@ -6,7 +6,7 @@ The email template in `Email.tsx` is built using the React Email from Resend.
 
 Learn more about Resend: https://resend.com/docs
 
-Learn more about Sapling: https://sapling.build/docs
+Learn more about Sapling: https://sapling.land/docs
 
 Learn more about the React Email: https://react.email/
 

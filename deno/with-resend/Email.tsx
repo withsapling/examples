@@ -43,7 +43,7 @@ export const EmailTemplate = () => {
                 You can learn more about Sapling and Resend with the links below
               </Text>
               <Container className="text-center mt-[32px]">
-                <Button className="bg-black text-white px-4 py-2 rounded-md mr-4" href="https://sapling.build/docs">Sapling Docs</Button>
+                <Button className="bg-black text-white px-4 py-2 rounded-md mr-4" href="https://sapling.land/docs">Sapling Docs</Button>
                 <Button className="bg-black text-white px-4 py-2 rounded-md" href="https://resend.com/docs">Resend Docs</Button>
               </Container>
             </Container>

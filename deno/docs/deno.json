@@ -6,7 +6,7 @@
   "imports": {
     "@sapling/markdown": "jsr:@sapling/markdown@^0.0.3",
     "@sapling/router": "jsr:@sapling/router@^0.0.20",
-    "@sapling/sapling": "jsr:@sapling/sapling@^0.0.18",
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.1.2",
     "unocss": "npm:unocss@^0.64.0"
   },
   "nodeModulesDir": "auto"

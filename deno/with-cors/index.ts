@@ -30,7 +30,7 @@ site.get("/", myMiddleware, async (c: Context) => {
             This is a site using
             <a
               class="text-blue-500 hover:underline"
-              href="https://sapling.build"
+              href="https://sapling.land"
               >Sapling</a
             >
             and
@@ -82,7 +82,7 @@ site.get("/:name", async (c) => {
             This is a site using
             <a
               class="text-blue-500 hover:underline"
-              href="https://sapling.build"
+              href="https://sapling.land"
               >Sapling</a
             >
             and

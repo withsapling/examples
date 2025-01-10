@@ -10,7 +10,7 @@ const handler = async () => {
         <h1 class="text-6xl font-bold">Hello World 🌍</h1>
         <p class="text-2xl">
           This is a site using
-          <a class="text-blue-500 hover:underline" href="https://sapling.build">Sapling</a> and
+          <a class="text-blue-500 hover:underline" href="https://sapling.land">Sapling</a> and
           <a class="text-blue-500 hover:underline" href="https://deno.com">Deno</a>
         </p>
         <p class="text-base font-mono text-gray-500">
