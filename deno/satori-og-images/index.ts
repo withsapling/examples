@@ -12,22 +12,10 @@ site.get("/", async (c) => {
         <div
           class="px-12 flex flex-col justify-center items-center h-screen gap-4"
         >
-          <h1 class="text-6xl font-bold">Hello World 🌍</h1>
-          <p class="text-2xl">
-            This is a site using
-            <a
-              class="text-blue-500 hover:underline"
-              href="https://sapling.land"
-              >Sapling</a
-            >
-            and
-            <a class="text-blue-500 hover:underline" href="https://deno.com"
-              >Deno</a
-            >
-          </p>
-          <p class="text-base font-mono text-gray-500">
-            It was server rendered at ${time}
-          </p>
+          <h1 class="text-6xl font-bold">Sapling & Satori OG Images 🖼️</h1>
+       
+         
+          <p>Enter your name below to see an image made just for you</p>
           <form
             action="/"
             method="get"
