@@ -32,6 +32,7 @@
 - [With Iconify](https://github.com/withsapling/examples/tree/main/deno/with-iconify)
 - [With Motion](https://github.com/withsapling/examples/tree/main/deno/with-motion)
 - [With React App](https://github.com/withsapling/examples/tree/main/deno/with-react-app)
+- [With React Component](https://github.com/withsapling/examples/tree/main/deno/with-react-component)
 - [With Resend](https://github.com/withsapling/examples/tree/main/deno/with-resend)
 - [With Sanity](https://github.com/withsapling/examples/tree/main/deno/with-sanity)
 - [With Static Caching Headers](https://github.com/withsapling/examples/tree/main/deno/with-static-caching-headers)
