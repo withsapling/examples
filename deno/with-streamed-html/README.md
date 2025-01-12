@@ -2,6 +2,8 @@
 
 Sapling's Layout component has a built-in `stream` option that allows you to stream the HTML response. This is useful for large pages that could benefit from a faster time to first byte.
 
+You can learn more about time to first byte [here](https://developer.chrome.com/docs/lighthouse/performance/server-response-time?utm_source=lighthouse&utm_medium=lr).
+
 If you are using Sapling's Router it is as simple as adding `stream: true` to the Layout component.
 
 However, if you're using Hono or another API framework, you'll need to handle the streaming manually.

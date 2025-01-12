@@ -24,6 +24,7 @@
 - [Satori OG Images](https://github.com/withsapling/examples/tree/main/deno/satori-og-images)
 - [Single File Landing Page](https://github.com/withsapling/examples/tree/main/deno/single-file-landing-page)
 - [Vite + Sapling](https://github.com/withsapling/examples/tree/main/deno/vite-sapling)
+- [With Streamed HTML](https://github.com/withsapling/examples/tree/main/deno/with-streamed-html)
 - [With AI (Gemini)](https://github.com/withsapling/examples/tree/main/deno/with-ai-gemini)
 - [With AI (OpenAI)](https://github.com/withsapling/examples/tree/main/deno/with-ai-openai)
 - [With Alpine.js](https://github.com/withsapling/examples/tree/main/deno/with-alpinejs)
