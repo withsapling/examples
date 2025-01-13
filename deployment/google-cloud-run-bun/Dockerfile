@@ -7,6 +7,8 @@ COPY package.json .
 # Install dependencies
 RUN bun install --frozen-lockfile
 
+EXPOSE 3000
+
 # Copy your source code
 COPY src ./src 
 

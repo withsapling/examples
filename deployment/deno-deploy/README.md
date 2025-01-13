@@ -1,4 +1,6 @@
-# This code will can be deployed directly to Deno Deploy there is no build step or configuration required.
+# Deno Deploy
+
+This code will can be deployed directly to Deno Deploy there is no build step or configuration required.
 
 ## Usage
 
