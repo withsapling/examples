@@ -4,6 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "start": "node index.js",
     "dev": "node --watch index.js"
   },
   "keywords": [],
@@ -12,6 +13,6 @@
   "description": "",
   "dependencies": {
     "@hono/node-server": "^1.13.7",
-    "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.2.0-beta.3"
+    "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.0.22"
   }
 }

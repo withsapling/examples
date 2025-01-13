@@ -1,9 +1,8 @@
-import { Sapling } from "@sapling/sapling";
-import { Layout, html } from "@sapling/sapling";
+import { html, Layout, Sapling, type Context } from "@sapling/sapling";
 
 const site = new Sapling();
 
-site.get("/", async (c) => {
+site.get("/", async (c: Context) => {
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
@@ -15,12 +14,13 @@ site.get("/", async (c) => {
           <h1 class="text-6xl font-bold">Hello World 🌍</h1>
           <p class="text-2xl">
             This is a site using
-            <a class="text-blue-500 hover:underline" href="https://sapling.land"
+            <a
+              class="text-blue-500 hover:underline"
+              href="https://sapling.land"
               >Sapling</a
-            >
-            and
-            <a class="text-blue-500 hover:underline" href="https://nodejs.org"
-              >Node.js</a
+            > and
+            <a class="text-blue-500 hover:underline" href="https://bun.sh"
+              >Bun</a
             >
           </p>
           <p class="text-base font-mono text-gray-500">
@@ -51,7 +51,7 @@ site.get("/", async (c) => {
   );
 });
 
-site.get("/:name", async (c) => {
+site.get("/:name", async (c: Context) => {
   const name = c.req.param("name");
   const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
   const time = new Date().toLocaleTimeString();
@@ -65,12 +65,16 @@ site.get("/:name", async (c) => {
           <h1 class="text-6xl font-bold">Hello ${capitalizedName} 🌍</h1>
           <p class="text-2xl">
             This is a site using
-            <a class="text-blue-500 hover:underline" href="https://sapling.land"
+            <a
+              class="text-blue-500 hover:underline"
+              href="https://sapling.land"
               >Sapling</a
-            >
-            and
-            <a class="text-blue-500 hover:underline" href="https://nodejs.org"
-              >Node.js</a
+            >,
+            <a class="text-blue-500 hover:underline" href="https://hono.dev"
+              >Hono</a
+            >, and
+            <a class="text-blue-500 hover:underline" href="https://bun.sh"
+              >Bun</a
             >
           </p>
           <p class="text-base font-mono text-gray-500">
@@ -83,10 +87,4 @@ site.get("/:name", async (c) => {
   );
 });
 
-export const handle = (req) => site.fetch(req);
-
-export const GET = handle;
-export const POST = handle;
-export const PATCH = handle;
-export const PUT = handle;
-export const OPTIONS = handle;
+export default site;

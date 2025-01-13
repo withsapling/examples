@@ -1,13 +1,13 @@
-import { handle } from "hono/vercel";
-import { html, Layout, Sapling } from "@sapling/sapling";
+// using Hono's node server
+import { serve } from "@hono/node-server";
+import { Sapling, Layout, html } from "@sapling/sapling";
 
-const app = new Sapling();
+const site = new Sapling();
 
-app.get("/", async (c) => {
+site.get("/", async (c) => {
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
-      stream: true,
       head: html` <title>Hello World 🌍</title> `,
       children: html`
         <div
@@ -18,10 +18,8 @@ app.get("/", async (c) => {
             This is a site using
             <a class="text-blue-500 hover:underline" href="https://sapling.land"
               >Sapling</a
-            >,
-            <a class="text-blue-500 hover:underline" href="https://hono.dev"
-              >Hono</a
-            >, and
+            >
+            and
             <a class="text-blue-500 hover:underline" href="https://nodejs.org"
               >Node.js</a
             >
@@ -54,14 +52,13 @@ app.get("/", async (c) => {
   );
 });
 
-app.get("/:name", async (c) => {
+site.get("/:name", async (c) => {
   const name = c.req.param("name");
   const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
-      stream: true,
-      head: html` <title>Hello ${capitalizedName} 🌍</title> `,
+      head: html`<title>Hello ${capitalizedName} 🌍</title>`,
       children: html`
         <div
           class="px-12 flex flex-col justify-center items-center h-screen gap-4"
@@ -71,10 +68,8 @@ app.get("/:name", async (c) => {
             This is a site using
             <a class="text-blue-500 hover:underline" href="https://sapling.land"
               >Sapling</a
-            >,
-            <a class="text-blue-500 hover:underline" href="https://hono.dev"
-              >Hono</a
-            >, and
+            >
+            and
             <a class="text-blue-500 hover:underline" href="https://nodejs.org"
               >Node.js</a
             >
@@ -89,10 +84,10 @@ app.get("/:name", async (c) => {
   );
 });
 
-const handler = handle(app);
+const port = 3000;
+console.log(`Server running at http://localhost:${port}/`);
 
-export const GET = handler;
-export const POST = handler;
-export const PATCH = handler;
-export const PUT = handler;
-export const OPTIONS = handler;
+serve({
+  fetch: site.fetch,
+  port,
+});

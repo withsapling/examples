@@ -1,14 +1,13 @@
-import { handle } from "hono/vercel";
-import { html, Layout, Sapling } from "@sapling/sapling";
+import { Sapling, Layout, html, type Context } from "@sapling/sapling";
 
-const app = new Sapling();
+const site = new Sapling();
 
-app.get("/", async (c) => {
+site.get("/", async (c: Context) => {
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
       stream: true,
-      head: html` <title>Hello World 🌍</title> `,
+      head: html` <title>Hello World 🌍</title>`,
       children: html`
         <div
           class="px-12 flex flex-col justify-center items-center h-screen gap-4"
@@ -16,14 +15,14 @@ app.get("/", async (c) => {
           <h1 class="text-6xl font-bold">Hello World 🌍</h1>
           <p class="text-2xl">
             This is a site using
-            <a class="text-blue-500 hover:underline" href="https://sapling.land"
+            <a
+              class="text-blue-500 hover:underline"
+              href="https://sapling.land"
               >Sapling</a
-            >,
-            <a class="text-blue-500 hover:underline" href="https://hono.dev"
-              >Hono</a
-            >, and
-            <a class="text-blue-500 hover:underline" href="https://nodejs.org"
-              >Node.js</a
+            >
+            and
+            <a class="text-blue-500 hover:underline" href="https://deno.com"
+              >Deno</a
             >
           </p>
           <p class="text-base font-mono text-gray-500">
@@ -54,14 +53,14 @@ app.get("/", async (c) => {
   );
 });
 
-app.get("/:name", async (c) => {
+site.get("/:name", async (c: Context) => {
   const name = c.req.param("name");
   const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
       stream: true,
-      head: html` <title>Hello ${capitalizedName} 🌍</title> `,
+      head: html`<title>Hello ${capitalizedName} 🌍</title>`,
       children: html`
         <div
           class="px-12 flex flex-col justify-center items-center h-screen gap-4"
@@ -69,14 +68,14 @@ app.get("/:name", async (c) => {
           <h1 class="text-6xl font-bold">Hello ${capitalizedName} 🌍</h1>
           <p class="text-2xl">
             This is a site using
-            <a class="text-blue-500 hover:underline" href="https://sapling.land"
+            <a
+              class="text-blue-500 hover:underline"
+              href="https://sapling.land"
               >Sapling</a
-            >,
-            <a class="text-blue-500 hover:underline" href="https://hono.dev"
-              >Hono</a
-            >, and
-            <a class="text-blue-500 hover:underline" href="https://nodejs.org"
-              >Node.js</a
+            >
+            and
+            <a class="text-blue-500 hover:underline" href="https://deno.com"
+              >Deno</a
             >
           </p>
           <p class="text-base font-mono text-gray-500">
@@ -89,10 +88,8 @@ app.get("/:name", async (c) => {
   );
 });
 
-const handler = handle(app);
-
-export const GET = handler;
-export const POST = handler;
-export const PATCH = handler;
-export const PUT = handler;
-export const OPTIONS = handler;
+Deno.serve({
+  port: 8080,
+  onListen: () => console.log("Server is running on http://localhost:8080"),
+  handler: site.fetch,
+});

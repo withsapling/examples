@@ -1,9 +1,9 @@
-import { handle } from "hono/vercel";
-import { html, Layout, Sapling } from "@sapling/sapling";
+import { Sapling } from "@sapling/sapling";
+import { Layout, html } from "@sapling/sapling";
 
-const app = new Sapling();
+const site = new Sapling();
 
-app.get("/", async (c) => {
+site.get("/", async (c) => {
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
@@ -18,10 +18,8 @@ app.get("/", async (c) => {
             This is a site using
             <a class="text-blue-500 hover:underline" href="https://sapling.land"
               >Sapling</a
-            >,
-            <a class="text-blue-500 hover:underline" href="https://hono.dev"
-              >Hono</a
-            >, and
+            >
+            and
             <a class="text-blue-500 hover:underline" href="https://nodejs.org"
               >Node.js</a
             >
@@ -54,7 +52,7 @@ app.get("/", async (c) => {
   );
 });
 
-app.get("/:name", async (c) => {
+site.get("/:name", async (c) => {
   const name = c.req.param("name");
   const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
   const time = new Date().toLocaleTimeString();
@@ -71,10 +69,8 @@ app.get("/:name", async (c) => {
             This is a site using
             <a class="text-blue-500 hover:underline" href="https://sapling.land"
               >Sapling</a
-            >,
-            <a class="text-blue-500 hover:underline" href="https://hono.dev"
-              >Hono</a
-            >, and
+            >
+            and
             <a class="text-blue-500 hover:underline" href="https://nodejs.org"
               >Node.js</a
             >
@@ -89,10 +85,10 @@ app.get("/:name", async (c) => {
   );
 });
 
-const handler = handle(app);
+export const handle = (req) => site.fetch(req);
 
-export const GET = handler;
-export const POST = handler;
-export const PATCH = handler;
-export const PUT = handler;
-export const OPTIONS = handler;
+export const GET = handle;
+export const POST = handle;
+export const PATCH = handle;
+export const PUT = handle;
+export const OPTIONS = handle;

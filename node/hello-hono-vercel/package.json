@@ -6,10 +6,10 @@
     "prod": "vercel deploy --prod"
   },
   "dependencies": {
-    "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.0.19",
+    "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.1.3",
     "hono": "^4.4.2"
   },
   "devDependencies": {
-    "vercel": "^32.4.1"
+    "vercel": "^39.2.6"
   }
 }
