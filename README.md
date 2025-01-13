@@ -79,4 +79,4 @@ Note: Because Bun has full Node.js compatibility, you can use just about any Nod
 - [Google Cloud Run Bun](https://github.com/withsapling/examples/tree/main/deployment/google-cloud-run-bun)
 - [Google Cloud Run Node](https://github.com/withsapling/examples/tree/main/deployment/google-cloud-run-node)
 
-> Contributions are welcome for more deployment examples such as Netlify Edge, Supabase Edge Functions, etc.
+> Contributions are welcome for more deployment examples such as Netlify Edge, Supabase Edge Functions, Render, Digital Ocean, etc.
