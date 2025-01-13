@@ -6,6 +6,7 @@
 - [Node.js Examples](#nodejs)
 - [Cloudflare Workers Examples](#cloudflare-workers)
 - [Bun Examples](#bun)
+- [Deployment Examples](#deployment)
 
 ## Deno
 
@@ -67,4 +68,13 @@ Note: Because Bun has full Node.js compatibility, you can use just about any Nod
 [View Bun Examples](https://github.com/withsapling/examples/tree/main/bun)
 
 - [Hello Hono](https://github.com/withsapling/examples/tree/main/bun/hello-hono)
+- [Hello Sapling](https://github.com/withsapling/examples/tree/main/bun/hello-sapling)
 
+## Deployment Examples
+
+- [Deno Deploy](https://github.com/withsapling/examples/tree/main/deployment/deno-deploy)
+- [Cloudflare Workers](https://github.com/withsapling/examples/tree/main/deployment/cf-workers/hello-sapling)
+- [Vercel Edge](https://github.com/withsapling/examples/tree/main/deployment/vercel-edge)
+- [Google Cloud Run Deno](https://github.com/withsapling/examples/tree/main/deployment/google-cloud-run-deno)
+- [Google Cloud Run Bun](https://github.com/withsapling/examples/tree/main/deployment/google-cloud-run-bun)
+- [Google Cloud Run Node](https://github.com/withsapling/examples/tree/main/deployment/google-cloud-run-node)
