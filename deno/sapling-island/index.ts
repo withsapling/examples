@@ -1,5 +1,6 @@
 
 import { Sapling, Layout, html, type Context } from "jsr:@sapling/sapling";
+import stressedPage from "./stressed.ts";
 
 const site = new Sapling();
 
@@ -21,7 +22,6 @@ site.get("/", async (c: Context) => {
           class="py-4 px-12 flex flex-col justify-center items-center gap-4"
         >
           <h1 class="text-6xl font-bold">Sapling Island 🏝️</h1>
-          
           <p>This is an island that will hydrate when the width is greater than 1024px</p>
           <sapling-island loading="(min-width: 1024px)">
             <p class="text-2xl font-bold">Sapling Island 🏝️</p>
@@ -34,7 +34,8 @@ site.get("/", async (c: Context) => {
           <sapling-island loading="onload">
             <p class="text-2xl font-bold">Sapling Island 🏝️</p>
           </sapling-island>
-        
+          <h2>Stress Test</h2>
+          <a class="text-blue-500" href="/stressed">Click here to see a page with 20,000 islands loaded on visible 🤯</a>
           <p>Keep scrolling to see an island that needs to be in view to hydrate</p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
@@ -110,6 +111,10 @@ site.get("/", async (c: Context) => {
       `,
     })
   );
+});
+
+site.get("/stressed", async (c: Context) => {
+  return c.html(await stressedPage());
 });
 
 Deno.serve({
