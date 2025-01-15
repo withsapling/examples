@@ -1,4 +1,4 @@
-import { Sapling, Layout, html, type Context } from "jsr:@sapling/sapling";
+import { Layout, html } from "jsr:@sapling/sapling";
 
 export default async function stressedPage() {
   return await Layout({
