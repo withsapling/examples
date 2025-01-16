@@ -1,4 +1,4 @@
-import { Sapling, Layout, html } from "jsr:@sapling/sapling";
+import { Sapling, Layout, html } from "@sapling/sapling";
 
 const site = new Sapling();
 
@@ -6,6 +6,7 @@ site.get("/", async (c) => {
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
+      stream: true,
       head: html` <title>Hello World 🌍</title>`,
       children: html`
         <div
@@ -58,6 +59,7 @@ site.get("/:name", async (c) => {
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
+      stream: true,
       head: html`<title>Hello ${capitalizedName} 🌍</title>`,
       children: html`
         <div
