@@ -5,6 +5,6 @@
   },
   "imports": {
     "@hono/hono": "jsr:@hono/hono@^4.6.9",
-    "@sapling/sapling": "jsr:@sapling/sapling@^0.1.2"
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.2.0"
   }
 }
