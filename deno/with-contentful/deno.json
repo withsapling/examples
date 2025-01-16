@@ -5,9 +5,9 @@
   },
   "imports": {
     "@contentful/rich-text-html-renderer": "npm:@contentful/rich-text-html-renderer@^17.0.0",
-    "@sapling/sapling": "jsr:@sapling/sapling@^0.0.26",
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.2.0-beta.8",
     "contentful": "npm:contentful@^11.2.5",
-    "unocss": "npm:unocss@^0.64.0"
+    "unocss": "npm:unocss@^65.4.0"
   },
   "nodeModulesDir": "auto"
 }
