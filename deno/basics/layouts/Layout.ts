@@ -2,7 +2,7 @@ import {
   Layout as SaplingLayout,
   html,
   type LayoutProps,
-} from "jsr:@sapling/sapling";
+} from "@sapling/sapling";
 import { BaseHead } from "../components/BaseHead.ts";
 import { config } from "../uno.config.ts";
 
@@ -16,6 +16,7 @@ export default async function Layout(
 ) {
   return await SaplingLayout(
     {
+      stream: true,
       unoConfig: config,
       head: html`${await BaseHead({
         title: props.title,
