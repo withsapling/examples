@@ -7,7 +7,7 @@ site.get("/", async (c) => {
   return c.html(
     await Layout({
       stream: true,
-      head: html` <title>Hello World 🌍</title>`,
+      head: html`<title>Hello World 🌍</title>`,
       children: html`
         <div
           class="px-12 flex flex-col justify-center items-center h-screen gap-4"
