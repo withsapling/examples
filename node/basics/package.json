@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@hono/node-server": "^1.13.5",
-    "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.0.26",
-    "unocss": "^0.64.1"
+    "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.2.0",
+    "unocss": "^65.4.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",

@@ -16,6 +16,7 @@ export default async function Layout(
 ) {
   return await SaplingLayout(
     {
+      stream: true,
       unoConfig: config,
       head: html`${await BaseHead({
         title: props.title,

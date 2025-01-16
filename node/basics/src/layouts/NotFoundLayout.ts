@@ -7,6 +7,7 @@ import { config } from "../uno.config.js";
 export default async function NotFoundLayout() {
   return await LayoutComponent(
     {
+      stream: true,
       unoConfig: config,
       head: html`
         ${await BaseHead({
