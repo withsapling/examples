@@ -36,13 +36,13 @@ export default async function TenThousandIslandPage() {
         ${Array.from(
       { length: 10000 },
       (_, i) => html`
-            <sapling-island loading="onvisible">
+            <sapling-island loading="visible">
               <p class="text-2xl font-bold">Island #${i + 1} 🏝️</p>
             </sapling-island>
           `
     )}
       </div>
-      <sapling-island loading="onvisible">
+      <sapling-island loading="visible">
         <template>
           <script type="module">
             import confetti from "https://cdn.skypack.dev/canvas-confetti";

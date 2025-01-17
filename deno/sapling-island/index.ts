@@ -49,7 +49,7 @@ site.get("/", async (c: Context) => {
           <p>Keep scrolling to see an island that needs to be in view to hydrate</p>
           <div class="h-[1000px]"></div>
 
-          <sapling-island loading="onvisible">
+          <sapling-island loading="visible">
           <!-- This template tag is use to keep the script tag from being executed until the island is hydrated -->
             <template>
               <script>
