@@ -1,17 +1,22 @@
 
-import { Sapling, Layout, html, type Context } from "jsr:@sapling/sapling";
-import stressedPage from "./stressed.ts";
-
-const site = new Sapling();
+import { Sapling, Layout, html, serveStatic, type Context } from "@sapling/sapling";
+import ThousandIslandPage from "./thousand-island.ts";
+import TenThousandIslandPage from "./ten-thousand-island.ts";
+const site = new Sapling({
+  dev: true,
+});
 
 site.get("/", async (c: Context) => {
   return c.html(
     await Layout({
-      head: html` <title>Hello World 🌍</title>
+      head: html` <title>Sapling Island Demo 🏝️</title>
       <!-- Sapling Island loaded from the CDN -->
       <script type="module" src="https://sapling-is.land"></script>
       <style>
-        sapling-island[hydrated] {
+        sapling-island {
+          display: contents;
+        }
+        sapling-island[hydrated] p, sapling-island[hydrated] div.content {
           border: 2px dotted red;
           padding: 1rem;
         }
@@ -34,65 +39,16 @@ site.get("/", async (c: Context) => {
           <sapling-island loading="onload">
             <p class="text-2xl font-bold">Sapling Island 🏝️</p>
           </sapling-island>
-          <h2>Stress Test</h2>
-          <a class="text-blue-500" href="/stressed">Click here to see a page with 20,000 islands loaded on visible 🤯</a>
+          <p>This is an island that will hydrate when the page is idle (you likely can't see the difference)</p>
+          <sapling-island loading="idle">
+            <p class="text-2xl font-bold">Sapling Island 🏝️</p>
+          </sapling-island>
+          <h2 class="text-2xl font-bold">1000 Island Test</h2>
+          <a class="bg-blue-500 text-white px-4 py-2 rounded-md" href="/thousand-island">Click here to see a page with 1000 islands 😉</a>
+          <a class="bg-blue-500 text-white px-4 py-2 rounded-md" href="/ten-thousand-island">Click here to see a page with 10000 islands 🤯</a>
           <p>Keep scrolling to see an island that needs to be in view to hydrate</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-            minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p></p>This is an island that will hydrate when the user scrolls it into view</p>
-          <p>You should only see the red dotted border when the island is hydrated</p>
+          <div class="h-[1000px]"></div>
+
           <sapling-island loading="onvisible">
           <!-- This template tag is use to keep the script tag from being executed until the island is hydrated -->
             <template>
@@ -103,9 +59,11 @@ site.get("/", async (c: Context) => {
                 }, 1000);
               </script>
             </template>
+            <div class="content">
               <p class="text-2xl font-bold">Sapling Island 🏝️</p>
               <p>The time should update every second after the island is hydrated</p>
               <p>The time is <time>00:00</time></p>
+            </div>
           </sapling-island>
         </div>
       `,
@@ -113,9 +71,17 @@ site.get("/", async (c: Context) => {
   );
 });
 
-site.get("/stressed", async (c: Context) => {
-  return c.html(await stressedPage());
+site.get("/thousand-island", async (c: Context) => {
+  return c.html(await ThousandIslandPage());
 });
+
+site.get("/ten-thousand-island", async (c: Context) => {
+  return c.html(await TenThousandIslandPage());
+});
+
+site.get("/*", serveStatic({
+  directory: "./static",
+}));
 
 Deno.serve({
   port: 8080,

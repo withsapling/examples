@@ -3,6 +3,6 @@
     "dev": "deno run -A --watch index.ts"
   },
   "imports": {
-    "@sapling/sapling": "jsr:@sapling/sapling@^0.2.0-beta.8"
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.2.0"
   }
 }
