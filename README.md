@@ -41,6 +41,7 @@
 - [With Web Components](https://github.com/withsapling/examples/tree/main/deno/with-web-components)
 - [With Zenblog](https://github.com/withsapling/examples/tree/main/deno/with-zenblog)
 - [With Deno KV](https://github.com/withsapling/examples/tree/main/deno/with-deno-kv)
+
 ## Node.js
 
 [View Node.js Examples](https://github.com/withsapling/examples/tree/main/node)
@@ -63,7 +64,8 @@
 
 ## Bun
 
-Note: Because Bun has full Node.js compatibility, you can use just about any Node.js example with Bun.
+Note: Because Bun generally works with most Node.js code, you can use just about
+any Node.js example with Bun.
 
 [View Bun Examples](https://github.com/withsapling/examples/tree/main/bun)
 
@@ -78,5 +80,7 @@ Note: Because Bun has full Node.js compatibility, you can use just about any Nod
 - [Google Cloud Run Deno](https://github.com/withsapling/examples/tree/main/deployment/google-cloud-run-deno)
 - [Google Cloud Run Bun](https://github.com/withsapling/examples/tree/main/deployment/google-cloud-run-bun)
 - [Google Cloud Run Node](https://github.com/withsapling/examples/tree/main/deployment/google-cloud-run-node)
+- [Supabase Edge](https://github.com/withsapling/examples/tree/main/deployment/supabase-edge)
 
-> Contributions are welcome for more deployment examples such as Netlify Edge, Supabase Edge Functions, Render, Digital Ocean, etc.
+> Contributions are welcome for more deployment examples such as Netlify Edge,
+> Supabase Edge Functions, Render, Digital Ocean, etc.
