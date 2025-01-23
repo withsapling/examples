@@ -1,4 +1,4 @@
-import { Sapling, serveStatic } from '@sapling/sapling'
+import { Sapling, serveStatic, type Context } from "@sapling/sapling";
 import NotFoundLayout from "./layouts/NotFoundLayout.ts";
 import { Home } from "./pages/Home.ts";
 
@@ -9,12 +9,12 @@ const site = new Sapling({
 });
 
 // Home page
-site.get("/", async (c) => c.html(await Home()));
+site.get("/", async (c: Context) => c.html(await Home()));
 // Enter additional routes here
 
 // Serve static files
 // The location of this is important. It should be the last route you define.
-site.get("/*", serveStatic({ directory: "./static", }));
+site.get("/*", serveStatic({ directory: "./static" }));
 
 // 404 Handler
 site.setNotFoundHandler(async (c) => c.html(await NotFoundLayout()));

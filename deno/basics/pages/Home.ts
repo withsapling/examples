@@ -1,22 +1,35 @@
 import { html } from "@sapling/sapling";
 import Layout from "../layouts/Layout.ts";
+import SaplingLogo from "../components/SaplingLogo.ts";
 
 export async function Home() {
   return await Layout({
-    head: html`
-    <!-- Ah vanilla JavaScript is so refreshing -->
-    <script type="module">
-      let count = 0;
-      document.querySelector("#countButton").addEventListener("click", () => {
-        count++;
-        document.querySelector("#count").textContent = count.toString();
-      });
-    </script>`,
     children: await html`
-      <main class="max-w-screen-lg min-h-screen mx-auto px-4 py-16 flex flex-col items-center justify-center font-sans gap-4">
-        <h1 class="text-4xl font-bold">Welcome to Sapling</h1>
-        <a href="https://sapling.land" class="bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800">Learn more</a>
-        <button id="countButton" class="px-4 py-2 rounded border-2 border">Click Count: <span id="count">0</span></button>
+      <main
+        class="max-w-screen-lg min-h-screen mx-auto px-4 py-16 flex flex-col items-center justify-center font-sans"
+      >
+        <div class="flex flex-col gap-4">
+          ${SaplingLogo({ width: 200, height: 48 })}
+          <p>To get started check out our quick start guide</p>
+          <a
+            href="https://sapling.land/docs/quick-start-deno"
+            class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 w-fit"
+            >Deno Quick Start
+            <span class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M5.4 20L4 18.6L15.6 7H9V5h10v10h-2V8.4z"
+                ></path>
+              </svg>
+            </span>
+          </a>
+        </div>
       </main>
     `,
   });
