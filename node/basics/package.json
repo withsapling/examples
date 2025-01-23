@@ -2,16 +2,17 @@
   "name": "my-app",
   "type": "module",
   "scripts": {
-    "dev": "NODE_ENV=development tsx watch src/index.ts",
+    "dev": "ENV=development tsx watch src/index.ts",
     "clean": "rm -rf dist",
     "copy-static": "cp -r static dist/static",
     "prebuild": "npm run clean",
     "build": "tsc && npm run copy-static",
-    "start": "NODE_ENV=production node dist/index.js"
+    "start": "ENV=production node dist/index.js"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.5",
     "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.2.0",
+    "dotenv": "^16.4.7",
     "unocss": "^65.4.0"
   },
   "devDependencies": {
