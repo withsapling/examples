@@ -1,0 +1,5 @@
+{
+  "deno.enable": true,
+  
+  "recommendations": ["denoland.vscode-deno", "runem.lit-plugin", "antfu.unocss" ]
+}

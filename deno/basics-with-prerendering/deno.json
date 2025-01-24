@@ -1,0 +1,12 @@
+{
+  "tasks": {
+    "start": "deno run -A --watch index.ts",
+    "dev": "ENV=development deno run -A --watch index.ts",
+    "build": "deno run -A build.ts"
+  },
+  "imports": {
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.3.0-beta.3",
+    "unocss": "npm:unocss@^65.4.0"
+  },
+  "nodeModulesDir": "auto"
+}
