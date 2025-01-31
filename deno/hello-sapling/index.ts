@@ -1,8 +1,8 @@
-import { Sapling, Layout, html } from "@sapling/sapling";
+import { Sapling, Layout, html, type Context } from "@sapling/sapling";
 
 const site = new Sapling();
 
-site.get("/", async (c) => {
+site.get("/", async (c: Context) => {
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
@@ -15,9 +15,7 @@ site.get("/", async (c) => {
           <h1 class="text-6xl font-bold">Hello World 🌍</h1>
           <p class="text-2xl">
             This is a site using
-            <a
-              class="text-blue-500 hover:underline"
-              href="https://sapling.land"
+            <a class="text-blue-500 hover:underline" href="https://sapling.land"
               >Sapling</a
             >
             and
@@ -53,7 +51,7 @@ site.get("/", async (c) => {
   );
 });
 
-site.get("/:name", async (c) => {
+site.get("/:name", async (c: Context) => {
   const name = c.req.param("name");
   const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
   const time = new Date().toLocaleTimeString();
@@ -68,9 +66,7 @@ site.get("/:name", async (c) => {
           <h1 class="text-6xl font-bold">Hello ${capitalizedName} 🌍</h1>
           <p class="text-2xl">
             This is a site using
-            <a
-              class="text-blue-500 hover:underline"
-              href="https://sapling.land"
+            <a class="text-blue-500 hover:underline" href="https://sapling.land"
               >Sapling</a
             >
             and
