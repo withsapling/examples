@@ -6,6 +6,7 @@ site.get("/", async (c) => {
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
+      stream: true,
       head: html` <title>Hello World 🌍</title> `,
       children: html`
         <div
@@ -58,6 +59,7 @@ site.get("/:name", async (c) => {
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
+      stream: true,
       head: html`<title>Hello ${capitalizedName} 🌍</title>`,
       children: html`
         <div

@@ -1,4 +1,4 @@
-import { Hono } from 'hono'
+import { Hono } from "hono";
 import { html, Layout } from "@sapling/sapling";
 
 const app = new Hono();
@@ -15,15 +15,15 @@ app.get("/", async (c) => {
           <h1 class="text-6xl font-bold">Hello World 🌍</h1>
           <p class="text-2xl">
             This is a site using
-            <a
-              class="text-blue-500 hover:underline"
-              href="https://sapling.land"
+            <a class="text-blue-500 hover:underline" href="https://sapling.land"
               >Sapling</a
             >,
             <a class="text-blue-500 hover:underline" href="https://hono.dev"
               >Hono</a
             >, and
-            <a class="text-blue-500 hover:underline" href="https://cloudflare.com"
+            <a
+              class="text-blue-500 hover:underline"
+              href="https://cloudflare.com"
               >Cloudflare Workers</a
             >
           </p>
@@ -69,15 +69,15 @@ app.get("/:name", async (c) => {
           <h1 class="text-6xl font-bold">Hello ${capitalizedName} 🌍</h1>
           <p class="text-2xl">
             This is a site using
-            <a
-              class="text-blue-500 hover:underline"
-              href="https://sapling.land"
+            <a class="text-blue-500 hover:underline" href="https://sapling.land"
               >Sapling</a
             >,
             <a class="text-blue-500 hover:underline" href="https://hono.dev"
               >Hono</a
             >, and
-            <a class="text-blue-500 hover:underline" href="https://cloudflare.com"
+            <a
+              class="text-blue-500 hover:underline"
+              href="https://cloudflare.com"
               >Cloudflare Workers</a
             >
           </p>
