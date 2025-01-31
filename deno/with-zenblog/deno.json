@@ -8,7 +8,7 @@
     "@sanity/client": "npm:@sanity/client@^6.23.0",
     "@sanity/image-url": "npm:@sanity/image-url@^1.1.0",
     "@sapling/markdown": "jsr:@sapling/markdown@^0.1.0",
-    "@sapling/sapling": "jsr:@sapling/sapling@^0.2.0-beta.8",
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.3.0",
     "unocss": "npm:unocss@^65.4.0",
     "zenblog": "npm:zenblog@^0.6.4"
   },
