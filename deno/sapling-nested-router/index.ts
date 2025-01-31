@@ -1,9 +1,8 @@
-import { Sapling } from '@sapling/sapling'
+import { Sapling } from "@sapling/sapling";
 
 import { router } from "./routes/router.ts";
 
 const site = new Sapling();
-
 
 router(site);
 
