@@ -24,12 +24,12 @@ site.prerender("/", async (c: Context) => c.html(await Home()));
 site.get(
   "/*",
   serveStatic({
-    directory: "./static",
+    root: "./static",
   })
 );
 
 // Set the not found handler last to catch all 404s
-site.setNotFoundHandler(async (c: Context) => c.html(await NotFoundLayout()));
+site.notFound(async (c: Context) => c.html(await NotFoundLayout()));
 
 const port = 8080;
 console.log(`Server is running on http://localhost:${port}`);
