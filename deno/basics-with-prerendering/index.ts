@@ -18,10 +18,10 @@ site.prerender("/", async (c: Context) => c.html(await Home()));
 
 // Serve static files
 // The location of this is important. It should be the last route you define.
-site.get("/*", serveStatic({ directory: "./static" }));
+site.get("*", serveStatic({ root: "./static" }));
 
 // 404 Handler
-site.setNotFoundHandler(async (c) => c.html(await NotFoundLayout()));
+site.notFound(async (c) => c.html(await NotFoundLayout()));
 
 Deno.serve({
   port: 8080,

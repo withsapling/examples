@@ -1,7 +1,7 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@sapling/sapling@~0.3.0-beta.3": "0.3.0-beta.3",
+    "jsr:@sapling/sapling@0.3": "0.3.0",
     "jsr:@std/media-types@^1.1.0": "1.1.0",
     "jsr:@std/path@^1.0.8": "1.0.8",
     "npm:@unocss/core@^65.4.0": "65.4.0",
@@ -10,8 +10,8 @@
     "npm:urlpattern-polyfill@10": "10.0.0"
   },
   "jsr": {
-    "@sapling/sapling@0.3.0-beta.3": {
-      "integrity": "5bc469ca7971979a811769cc7d54c533aad0fc048a9537171d79298146b2e242",
+    "@sapling/sapling@0.3.0": {
+      "integrity": "39cc6a620c4c9284bc55aca10d96081eca57e4b797db503b137d4a8efa512f45",
       "dependencies": [
         "jsr:@std/media-types",
         "jsr:@std/path",
@@ -1003,7 +1003,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@sapling/sapling@~0.3.0-beta.3",
+      "jsr:@sapling/sapling@0.3",
       "npm:unocss@^65.4.0"
     ]
   }
