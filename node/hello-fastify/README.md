@@ -1,4 +1,4 @@
-![Sapling Fastify Example](./github/image.png)
+![Sapling Fastify Example](https://github.com/withsapling/examples/blob/main/node/hello-fastify/.github/image.png?raw=true)
 
 # Sapling Fastify Example
 
