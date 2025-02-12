@@ -1,6 +1,9 @@
+![Sapling Fastify Example](./github/image.png)
+
 # Sapling Fastify Example
 
-This is a simple example of how to use Sapling with Fastify as your backend router.
+This is a simple example of how to use Sapling with Fastify as your backend
+router.
 
 ## Installation
 

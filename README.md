@@ -48,6 +48,7 @@
 
 - [Basics](https://github.com/withsapling/examples/tree/main/node/basics)
 - [Hello Express](https://github.com/withsapling/examples/tree/main/node/hello-express)
+- [Hello Fastify](https://github.com/withsapling/examples/tree/main/node/hello-fastify)
 - [Hello Hono](https://github.com/withsapling/examples/tree/main/node/hello-hono)
 - [Hello Hono + Vercel](https://github.com/withsapling/examples/tree/main/node/hello-hono-vercel)
 - [Hello Node](https://github.com/withsapling/examples/tree/main/node/hello-node)
