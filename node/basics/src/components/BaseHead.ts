@@ -8,7 +8,6 @@ export function BaseHead({
     <title>${title}</title>
     <meta name="description" content="${description}" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta property="og:image" content="/social.png" />
     <style>
       :root {
         --color-primary: #000;
