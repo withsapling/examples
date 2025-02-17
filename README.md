@@ -55,6 +55,7 @@
 - [Hello Sapling](https://github.com/withsapling/examples/tree/main/node/hello-sapling)
 - [Hello Sapling + Vercel](https://github.com/withsapling/examples/tree/main/node/hello-sapling-vercel)
 - [Vite + Sapling](https://github.com/withsapling/examples/tree/main/node/vite-sapling)
+- [With React Vite App](https://github.com/withsapling/examples/tree/main/node/with-react-vite-app)
 
 ## Cloudflare Workers
 
