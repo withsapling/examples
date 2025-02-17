@@ -11,20 +11,19 @@ export type BaseLayoutProps = LayoutProps & {
   description?: string;
 };
 
-export default async function Layout(
-  props: BaseLayoutProps
-) {
-  return await SaplingLayout(
-    {
-      stream: true,
-      unoConfig: config,
-      head: html`${await BaseHead({
-        title: props.title,
-        description: props.description,
-      })}
-      ${await props.head}`,
-      bodyClass: `font-sans @dark:bg-black @dark:text-white ${props.bodyClass ?? ``}`,
-      children: props.children,
-    },
-  );
+export default async function Layout(props: BaseLayoutProps) {
+  return await SaplingLayout({
+    stream: true,
+    enableIslands: true,
+    unoConfig: config,
+    head: html`${await BaseHead({
+      title: props.title,
+      description: props.description,
+    })}
+    ${await props.head}`,
+    bodyClass: `font-sans @dark:bg-black @dark:text-white ${
+      props.bodyClass ?? ``
+    }`,
+    children: props.children,
+  });
 }
