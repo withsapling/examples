@@ -1,0 +1,36 @@
+{
+  "name": "my-app",
+  "type": "module",
+  "scripts": {
+    "dev:sapling": "NODE_ENV=development tsx watch src/index.ts",
+    "dev:client": "NODE_ENV=development vite --config vite.client.config.ts",
+    "dev": "npm run dev:sapling & npm run dev:client",
+    "clean": "rm -rf dist static/app",
+    "copy-static": "cp -r static dist/static",
+    "prebuild": "npm run clean",
+    "build:sapling": "NODE_ENV=production vite build --config vite.server.config.ts",
+    "build:client": "NODE_ENV=production vite build --config vite.client.config.ts",
+    "build": "npm run build:sapling && npm run build:client && npm run copy-static",
+    "start": "NODE_ENV=production node dist/index.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.5",
+    "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.4.3",
+    "@tailwindcss/vite": "^4.0.6",
+    "@vitejs/plugin-react": "^4.3.4",
+    "dotenv": "^16.4.7",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "^7.1.3",
+    "unocss": "^65.5.0",
+    "vite": "^6.0.10"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.14",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "autoprefixer": "^10.4.20",
+    "tailwindcss": "^4.0.6",
+    "typescript": "^5.6.3"
+  }
+}
