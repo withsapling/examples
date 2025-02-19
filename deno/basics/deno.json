@@ -4,8 +4,8 @@
     "dev": "ENV=development deno run -A --watch index.ts"
   },
   "imports": {
-    "@sapling/sapling": "jsr:@sapling/sapling@^0.4.3",
-    "unocss": "npm:unocss@^65.4.0"
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.5.0",
+    "unocss": "npm:unocss@^66.0.0"
   },
   "nodeModulesDir": "auto"
 }
