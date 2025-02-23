@@ -1,7 +1,7 @@
 import { defineConfig } from "unocss";
-import { presetUno } from "unocss/preset-uno";
+import { presetWind3 } from "unocss/preset-wind3";
 import { presetTypography } from "unocss/preset-typography";
 
 export const config = defineConfig({
-  presets: [presetUno(), presetTypography()],
+  presets: [presetWind3(), presetTypography()],
 });
