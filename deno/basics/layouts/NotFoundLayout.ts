@@ -1,4 +1,5 @@
-import { Layout as LayoutComponent, html } from "@sapling/sapling";
+import { html } from "@hono/hono/html";
+import { Layout as LayoutComponent } from "@sapling/sapling";
 import { BaseHead } from "../components/BaseHead.ts";
 import { config } from "../uno.config.ts";
 
@@ -7,7 +8,6 @@ import { config } from "../uno.config.ts";
 export default async function NotFoundLayout() {
   return await LayoutComponent(
     {
-      stream: true,
       unoConfig: config,
       head: html`
         ${await BaseHead({

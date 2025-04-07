@@ -1,4 +1,4 @@
-import { html } from "@sapling/sapling";
+import { html } from "@hono/hono/html";
 import Layout from "../layouts/Layout.ts";
 import SaplingLogo from "../components/SaplingLogo.ts";
 

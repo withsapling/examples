@@ -1,12 +1,9 @@
-import { Sapling, serveStatic, type Context } from "@sapling/sapling";
+import { Hono, type Context } from "@hono/hono";
+import { serveStatic } from "@hono/hono/deno";
 import NotFoundLayout from "./layouts/NotFoundLayout.ts";
 import { Home } from "./pages/Home.ts";
 
-const site = new Sapling({
-  // this will disable caching for static files in development
-  // it is automatically passed in when you run deno task dev
-  dev: Deno.env.get("ENV") === "development",
-});
+const site = new Hono();
 
 // Home page
 site.get("/", async (c: Context) => c.html(await Home()));

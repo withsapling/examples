@@ -1,30 +1,23 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@sapling/sapling@0.5": "0.5.0",
-    "jsr:@std/media-types@^1.1.0": "1.1.0",
-    "jsr:@std/path@^1.0.8": "1.0.8",
+    "jsr:@hono/hono@^4.7.5": "4.7.5",
+    "jsr:@sapling/sapling@~0.6.0-beta.15": "0.6.0-beta.15",
     "npm:@unocss/core@66": "66.0.0",
     "npm:@unocss/preset-uno@66": "66.0.0",
-    "npm:unocss@66": "66.0.0",
-    "npm:urlpattern-polyfill@10": "10.0.0"
+    "npm:unocss@66": "66.0.0"
   },
   "jsr": {
-    "@sapling/sapling@0.5.0": {
-      "integrity": "8dd6261c2e85bbb9706723cd9a5067d75b844125e0a82a4d2e3d40ce55ed62c6",
+    "@hono/hono@4.7.5": {
+      "integrity": "36a7e1b3db8a58e5dc2bd36a76be53346f0966e04c24c635c4d6f58875575b0a"
+    },
+    "@sapling/sapling@0.6.0-beta.15": {
+      "integrity": "cb5331674e97346995e76f08746f4610346cc83c74227e83a74ac0b6a6889a22",
       "dependencies": [
-        "jsr:@std/media-types",
-        "jsr:@std/path",
+        "jsr:@hono/hono",
         "npm:@unocss/core",
-        "npm:@unocss/preset-uno",
-        "npm:urlpattern-polyfill"
+        "npm:@unocss/preset-uno"
       ]
-    },
-    "@std/media-types@1.1.0": {
-      "integrity": "c9d093f0c05c3512932b330e3cc1fe1d627b301db33a4c2c2185c02471d6eaa4"
-    },
-    "@std/path@1.0.8": {
-      "integrity": "548fa456bb6a04d3c1a1e7477986b6cffbce95102d0bb447c67c4ee70e0364be"
     }
   },
   "npm": {
@@ -836,9 +829,6 @@
         "picomatch@4.0.2"
       ]
     },
-    "urlpattern-polyfill@10.0.0": {
-      "integrity": "sha512-H/A06tKD7sS1O1X2SshBVeA5FLycRpjqiBeqGKmBwBDBy28EnRjORxTNe269KSSr5un5qyWi1iL61wLxpd+ZOg=="
-    },
     "vite@6.1.1": {
       "integrity": "sha512-4GgM54XrwRfrOp297aIYspIti66k56v16ZnqHvrIM7mG+HjDlAwS7p+Srr7J6fGvEdOJ5JcQ/D9T7HhtdXDTzA==",
       "dependencies": [
@@ -867,7 +857,8 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@sapling/sapling@0.5",
+      "jsr:@hono/hono@^4.7.5",
+      "jsr:@sapling/sapling@~0.6.0-beta.15",
       "npm:unocss@66"
     ]
   }

@@ -1,4 +1,4 @@
-import { html } from "@sapling/sapling";
+import { html } from "@hono/hono/html";
 
 export default function SaplingLogo({ width = 711, height = 176 } = {}) {
   return html`<svg
