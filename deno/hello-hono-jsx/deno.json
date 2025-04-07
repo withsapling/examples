@@ -1,0 +1,14 @@
+{
+  "tasks": {
+    "start": "deno run -A --watch main.tsx",
+    "dev": "deno run -A --watch main.tsx"
+  },
+  "imports": {
+    "@hono/hono": "jsr:@hono/hono@^4.6.9",
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.6.0-beta.14"
+  },
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "@hono/hono/jsx"
+  }
+}
