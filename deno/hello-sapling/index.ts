@@ -1,12 +1,13 @@
-import { Sapling, Layout, html, type Context } from "@sapling/sapling";
+import { Hono, type Context } from "@hono/hono";
+import { html } from "@hono/hono/html";
+import { Layout } from "@sapling/sapling";
 
-const site = new Sapling();
+const site = new Hono();
 
 site.get("/", async (c: Context) => {
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
-      stream: true,
       head: html`<title>Hello World 🌍</title>`,
       children: html`
         <div
@@ -57,7 +58,6 @@ site.get("/:name", async (c: Context) => {
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
-      stream: true,
       head: html`<title>Hello ${capitalizedName} 🌍</title>`,
       children: html`
         <div
