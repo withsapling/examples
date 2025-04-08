@@ -4,6 +4,7 @@
     "start": "deno run -A index.ts"
   },
   "imports": {
-    "@sapling/sapling": "jsr:@sapling/sapling@^0.3.0"
+    "@hono/hono": "jsr:@hono/hono@^4.7.5",
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.6.0"
   }
 }

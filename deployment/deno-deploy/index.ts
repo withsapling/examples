@@ -1,8 +1,10 @@
-import { Sapling, Layout, html, type Context } from "@sapling/sapling";
+import { Hono, type Context } from "@hono/hono";
+import { Layout } from "@sapling/sapling";
+import { html } from "@hono/hono/html";
 
-const site = new Sapling();
+const app = new Hono();
 
-site.get("/", async (c: Context) => {
+app.get("/", async (c: Context) => {
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
@@ -53,7 +55,7 @@ site.get("/", async (c: Context) => {
   );
 });
 
-site.get("/:name", async (c: Context) => {
+app.get("/:name", async (c: Context) => {
   const name = c.req.param("name");
   const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
   const time = new Date().toLocaleTimeString();
@@ -91,5 +93,5 @@ site.get("/:name", async (c: Context) => {
 Deno.serve({
   port: 8080,
   onListen: () => console.log("Server is running on http://localhost:8080"),
-  handler: site.fetch,
+  handler: app.fetch,
 });
