@@ -5,7 +5,7 @@
   },
   "imports": {
     "@hono/hono": "jsr:@hono/hono@^4.6.9",
-    "@sapling/sapling": "jsr:@sapling/sapling@^0.6.0-beta.14"
+    "@sapling/sapling": "jsr:@sapling/sapling@^0.6.0"
   },
   "compilerOptions": {
     "jsx": "precompile",

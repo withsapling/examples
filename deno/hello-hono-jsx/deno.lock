@@ -4,8 +4,8 @@
     "jsr:@hono/hono@^4.6.7": "4.6.9",
     "jsr:@hono/hono@^4.6.9": "4.6.9",
     "jsr:@hono/hono@^4.7.5": "4.7.5",
+    "jsr:@sapling/sapling@0.6": "0.6.0",
     "jsr:@sapling/sapling@~0.1.2": "0.1.2",
-    "jsr:@sapling/sapling@~0.6.0-beta.14": "0.6.0-beta.14",
     "jsr:@std/media-types@^1.1.0": "1.1.0",
     "jsr:@std/path@^1.0.8": "1.0.8",
     "npm:@types/node@*": "22.5.4",
@@ -33,8 +33,8 @@
         "npm:urlpattern-polyfill"
       ]
     },
-    "@sapling/sapling@0.6.0-beta.14": {
-      "integrity": "e39c3845f8d4ed84c7dc331b379a60cf4eac6a2ca66274e269f1b97791b55c49",
+    "@sapling/sapling@0.6.0": {
+      "integrity": "4cf56ad45c95ed5ad6b2d8f19226f1c80d3869cce309cc00db014884b9428873",
       "dependencies": [
         "jsr:@hono/hono@^4.7.5",
         "npm:@unocss/core@66",
@@ -163,7 +163,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@hono/hono@^4.6.9",
-      "jsr:@sapling/sapling@~0.6.0-beta.14"
+      "jsr:@sapling/sapling@0.6"
     ]
   }
 }
