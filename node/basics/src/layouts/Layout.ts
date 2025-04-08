@@ -1,8 +1,8 @@
 import {
   Layout as SaplingLayout,
-  html,
   type LayoutProps,
 } from "@sapling/sapling";
+import { html } from "hono/html";
 import { BaseHead } from "../components/BaseHead.js";
 import { config } from "../uno.config.js";
 

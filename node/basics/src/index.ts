@@ -1,16 +1,13 @@
 import dotenv from "dotenv";
+import { Hono, type Context } from "hono";
 import { serve } from "@hono/node-server";
-import { Sapling, serveStatic, type Context } from "@sapling/sapling";
+import { serveStatic } from "@hono/node-server/serve-static";
 import { Home } from "./pages/Home.js";
 import NotFoundLayout from "./layouts/NotFoundLayout.js";
 
 dotenv.config();
 
-const site = new Sapling({
-  // this will disable caching for static files in development
-  // it is automatically passed in when you run deno task dev
-  dev: process.env.ENV === "development",
-});
+const site = new Hono();
 
 // Home page
 site.get("/", async (c: Context) => c.html(await Home()));

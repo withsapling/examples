@@ -1,8 +1,7 @@
-import { Layout as LayoutComponent, html } from "@sapling/sapling";
+import { Layout as LayoutComponent } from "@sapling/sapling";
+import { html } from "hono/html";
 import { BaseHead } from "../components/BaseHead.js";
 import { config } from "../uno.config.js";
-
-
 
 export default async function NotFoundLayout() {
   return await LayoutComponent(
