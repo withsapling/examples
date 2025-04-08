@@ -1,5 +1,6 @@
 import express from "express";
-import { html, Layout } from "@sapling/sapling";
+import { Layout } from "@sapling/sapling";
+import { html } from "hono/html";
 
 const app = express();
 
@@ -53,7 +54,7 @@ app.get("/", async (req, res) => {
 
   res.setHeader("Content-Type", "text/html");
 
-  res.send(content);
+  res.send(content.toString());
 });
 
 app.get("/:name", async (req, res) => {
@@ -87,7 +88,7 @@ app.get("/:name", async (req, res) => {
 
   res.setHeader("Content-Type", "text/html");
 
-  res.send(content);
+  res.send(content.toString());
 });
 
 const port = 3000;
