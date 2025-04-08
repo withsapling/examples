@@ -1,10 +1,12 @@
 // using Hono's node server
+import { Hono } from "hono";
+import { Layout } from "@sapling/sapling";
 import { serve } from "@hono/node-server";
-import { Sapling, Layout, html } from "@sapling/sapling";
+import { html } from "hono/html";
 
-const site = new Sapling();
+const app = new Hono();
 
-site.get("/", async (c) => {
+app.get("/", async (c) => {
   const time = new Date().toLocaleTimeString();
   return c.html(
     await Layout({
@@ -53,7 +55,7 @@ site.get("/", async (c) => {
   );
 });
 
-site.get("/:name", async (c) => {
+app.get("/:name", async (c) => {
   const name = c.req.param("name");
   const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
   const time = new Date().toLocaleTimeString();
@@ -90,6 +92,6 @@ const port = 8080;
 console.log(`Server running at http://localhost:${port}/`);
 
 serve({
-  fetch: site.fetch,
+  fetch: app.fetch,
   port,
 });

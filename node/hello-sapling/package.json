@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "@hono/node-server": "^1.13.7",
-    "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.5.0"
+    "@sapling/sapling": "npm:@jsr/sapling__sapling@^0.6.0",
+    "hono": "^4.7.5"
   }
 }
