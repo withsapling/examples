@@ -13,7 +13,7 @@ export async function Home() {
           <p>To get started check out our quick start guide</p>
           <a
             href="https://sapling.land/docs/quick-start-deno"
-            class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 w-fit"
+            class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded-full hover:bg-gray-800 @dark:bg-white @dark:text-black @dark:hover:bg-gray-200 w-fit"
             >Deno Quick Start
             <span class="flex items-center">
               <svg
