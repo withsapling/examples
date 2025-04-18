@@ -13,7 +13,7 @@
 [View Deno Examples](https://github.com/withsapling/examples/tree/main/deno)
 
 - [Basics](https://github.com/withsapling/examples/tree/main/deno/basics)
-- [Bascis With JSX](https://github.com/withsapling/examples/tree/main/deno/basics-jsx)
+- [Bascis With HTML Templates](https://github.com/withsapling/examples/tree/main/deno/basics-html)
 - [Blog](https://github.com/withsapling/examples/tree/main/deno/blog)
 - [Docs](https://github.com/withsapling/examples/tree/main/deno/docs)
 - [Sapling Island](https://github.com/withsapling/examples/tree/main/deno/sapling-island)
