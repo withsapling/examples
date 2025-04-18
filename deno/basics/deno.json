@@ -1,12 +1,16 @@
 {
   "tasks": {
-    "start": "deno run -A --watch index.ts",
-    "dev": "ENV=development deno run -A --watch index.ts"
+    "start": "deno run -A --watch index.tsx",
+    "dev": "ENV=development deno run -A --watch index.tsx"
   },
   "imports": {
     "@hono/hono": "jsr:@hono/hono@^4.7.5",
     "@sapling/sapling": "jsr:@sapling/sapling@^0.6.0",
     "unocss": "npm:unocss@^66.0.0"
+  },
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "@hono/hono/jsx"
   },
   "nodeModulesDir": "auto"
 }
