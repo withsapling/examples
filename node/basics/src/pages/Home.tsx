@@ -1,5 +1,5 @@
-import Layout from "../layouts/Layout.tsx";
-import SaplingLogo from "../components/SaplingLogo.tsx";
+import Layout from "../layouts/Layout.js";
+import SaplingLogo from "../components/SaplingLogo.js";
 
 export function Home() {
   return (
