@@ -1,12 +1,14 @@
 
-import { Sapling, Layout, html, serveStatic, type Context } from "@sapling/sapling";
+import { Hono, Context } from "@hono/hono";
+import { Layout } from "@sapling/sapling";
+import { html } from "@hono/hono/html";
+import { serveStatic } from "@hono/hono/deno";
 import ThousandIslandPage from "./thousand-island.ts";
 import TenThousandIslandPage from "./ten-thousand-island.ts";
-const site = new Sapling({
-  dev: true,
-});
 
-site.get("/", async (c: Context) => {
+const app = new Hono();
+
+app.get("/", async (c: Context) => {
   return c.html(
     await Layout({
       head: html` <title>Sapling Island Demo 🏝️</title>
@@ -71,20 +73,20 @@ site.get("/", async (c: Context) => {
   );
 });
 
-site.get("/thousand-island", async (c: Context) => {
+app.get("/thousand-island", async (c: Context) => {
   return c.html(await ThousandIslandPage());
 });
 
-site.get("/ten-thousand-island", async (c: Context) => {
+app.get("/ten-thousand-island", async (c: Context) => {
   return c.html(await TenThousandIslandPage());
 });
 
-site.get("/*", serveStatic({
-  directory: "./static",
+app.get("/*", serveStatic({
+  root: "./static",
 }));
 
 Deno.serve({
   port: 8080,
   onListen: () => console.log("Server is running on http://localhost:8080"),
-  handler: site.fetch,
+  handler: app.fetch,
 });

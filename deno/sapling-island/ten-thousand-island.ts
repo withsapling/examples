@@ -1,4 +1,5 @@
-import { Layout, html } from "@sapling/sapling";
+import { Layout } from "@sapling/sapling";
+import { html } from "@hono/hono/html";
 
 export default async function TenThousandIslandPage() {
   return await Layout({

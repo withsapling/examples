@@ -1,4 +1,5 @@
-import { Layout, html } from "@sapling/sapling";
+import { Layout } from "@sapling/sapling";
+import { html } from "@hono/hono/html";
 
 export default async function ThousandIslandPage() {
   return await Layout({
@@ -52,6 +53,7 @@ export default async function ThousandIslandPage() {
               origin: { y: 0.6 },
             });
           </script>
+  
         </template>
         <h2 class="py-6 text-2xl font-bold text-center my-4">
           🎉 Congratulations on reaching the bottom! 🎉

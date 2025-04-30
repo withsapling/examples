@@ -1,71 +1,63 @@
 {
   "version": "4",
   "specifiers": {
-    "jsr:@sapling/sapling@0.2": "0.2.0",
-    "jsr:@std/media-types@^1.1.0": "1.1.0",
-    "jsr:@std/path@^1.0.8": "1.0.8",
-    "npm:@unocss/core@^65.4.0": "65.4.2",
-    "npm:@unocss/preset-uno@^65.4.0": "65.4.2",
-    "npm:urlpattern-polyfill@10": "10.0.0"
+    "jsr:@hono/hono@^4.7.5": "4.7.8",
+    "jsr:@hono/hono@^4.7.8": "4.7.8",
+    "jsr:@sapling/sapling@0.6": "0.6.0",
+    "npm:@unocss/core@66": "66.0.0",
+    "npm:@unocss/preset-uno@66": "66.0.0"
   },
   "jsr": {
-    "@sapling/sapling@0.2.0": {
-      "integrity": "0d32cab111eb8eca7d7bec360ccb9395ae75d828b70ab73b451fbe0b464de1db",
+    "@hono/hono@4.7.8": {
+      "integrity": "620b1eaab065196d4ebe02cff31f8d3a78c94f736ce2ca86ee14f5f26fe48ecd"
+    },
+    "@sapling/sapling@0.6.0": {
+      "integrity": "4cf56ad45c95ed5ad6b2d8f19226f1c80d3869cce309cc00db014884b9428873",
       "dependencies": [
-        "jsr:@std/media-types",
-        "jsr:@std/path",
+        "jsr:@hono/hono@^4.7.5",
         "npm:@unocss/core",
-        "npm:@unocss/preset-uno",
-        "npm:urlpattern-polyfill"
+        "npm:@unocss/preset-uno"
       ]
-    },
-    "@std/media-types@1.1.0": {
-      "integrity": "c9d093f0c05c3512932b330e3cc1fe1d627b301db33a4c2c2185c02471d6eaa4"
-    },
-    "@std/path@1.0.8": {
-      "integrity": "548fa456bb6a04d3c1a1e7477986b6cffbce95102d0bb447c67c4ee70e0364be"
     }
   },
   "npm": {
     "@jridgewell/sourcemap-codec@1.5.0": {
       "integrity": "sha512-gv3ZRaISU3fjPAgNsriBRqGWQL6quFx04YMPW/zD8XMLsU32mhCCbfbO6KZFLjvYpCZ8zyDEgqsgf+PwPaM7GQ=="
     },
-    "@unocss/core@65.4.2": {
-      "integrity": "sha512-VmXy5D25por+pt9LBlKZ3gk4rOE5ldm80MyVOEnLcpaFb9LqB0g/8qUU9/Dk3TSA+ZPeoGm53Juo0p8LMFIigA=="
+    "@unocss/core@66.0.0": {
+      "integrity": "sha512-PdVbSMHNDDkr++9nkqzsZRAkaU84gxMTEgYbqI7dt2p1DXp/5tomVtmMsr2/whXGYKRiUc0xZ3p4Pzraz8TcXA=="
     },
-    "@unocss/extractor-arbitrary-variants@65.4.2": {
-      "integrity": "sha512-qm5JXfjbxgXqhQAeOfV1jFT1ThBTi1bP1m+Nu2p6tB9EUbAUp+AKY4sODueqDXoriUtOc7h0QzyW3Lm+s3fTGw==",
+    "@unocss/extractor-arbitrary-variants@66.0.0": {
+      "integrity": "sha512-vlkOIOuwBfaFBJcN6o7+obXjigjOlzVFN/jT6pG1WXbQDTRZ021jeF3i9INdb9D/0cQHSeDvNgi1TJ5oUxfiow==",
       "dependencies": [
         "@unocss/core"
       ]
     },
-    "@unocss/preset-mini@65.4.2": {
-      "integrity": "sha512-4ZZK9KwDHjI8wFUKeB+30GHekPmy1OzXncjlXhqm+vNQ7FO3xCee7VY00E5bgz5Tt0pXALcKFlrEspjpSaeCoQ==",
+    "@unocss/preset-mini@66.0.0": {
+      "integrity": "sha512-d62eACnuKtR0dwCFOQXgvw5VLh5YSyK56xCzpHkh0j0GstgfDLfKTys0T/XVAAvdSvAy/8A8vhSNJ4PlIc9V2A==",
       "dependencies": [
         "@unocss/core",
         "@unocss/extractor-arbitrary-variants",
         "@unocss/rule-utils"
       ]
     },
-    "@unocss/preset-uno@65.4.2": {
-      "integrity": "sha512-rJcGx/+EWA3wXGOAZdYQFSEn8knsiqiST/Ji1adN+9dTq4BVYMZ9n3zYRF6GZ8p61aZomhU4jmzpLk12RMdxpg==",
+    "@unocss/preset-uno@66.0.0": {
+      "integrity": "sha512-qgoZ/hzTI32bQvcyjcwvv1X/dbPlmQNehzgjUaL7QFT0q0/CN/SRpysfzoQ8DLl2se9T+YCOS9POx3KrpIiYSQ==",
+      "dependencies": [
+        "@unocss/core",
+        "@unocss/preset-wind3"
+      ]
+    },
+    "@unocss/preset-wind3@66.0.0": {
+      "integrity": "sha512-WAGRmpi1sb2skvYn9DBQUvhfqrJ+VmQmn5ZGsT2ewvsk7HFCvVLAMzZeKrrTQepeNBRhg6HzFDDi8yg6yB5c9g==",
       "dependencies": [
         "@unocss/core",
         "@unocss/preset-mini",
-        "@unocss/preset-wind",
         "@unocss/rule-utils"
       ]
     },
-    "@unocss/preset-wind@65.4.2": {
-      "integrity": "sha512-TQm9P2UHpqfn92APfZJtbK2brkXQ+GInFL2evup/ZChU1fqdbH9mL0ef6ZNQbCH4gjY6mEzwPXt4lhGod6CajA==",
-      "dependencies": [
-        "@unocss/core",
-        "@unocss/preset-mini",
-        "@unocss/rule-utils"
-      ]
-    },
-    "@unocss/rule-utils@65.4.2": {
-      "integrity": "sha512-OdMSJZiZUr8XmLo3Bz3Wrw1nZLT1nTPnPOV8gdi4vZ+2RgCChua9o8Dz4IyeQ7mMhLXoqHIUpJ7jE5Nv+Uz1Fw==",
+    "@unocss/rule-utils@66.0.0": {
+      "integrity": "sha512-UJ51YHbwxYTGyj35ugsPlOT4gaa7tCbXdywZ3m5Nn0JgywwIqGmBFyiN9ZjHBHfJuDxmmPd6lxojoBscih/WMQ==",
       "dependencies": [
         "@unocss/core",
         "magic-string"
@@ -76,14 +68,12 @@
       "dependencies": [
         "@jridgewell/sourcemap-codec"
       ]
-    },
-    "urlpattern-polyfill@10.0.0": {
-      "integrity": "sha512-H/A06tKD7sS1O1X2SshBVeA5FLycRpjqiBeqGKmBwBDBy28EnRjORxTNe269KSSr5un5qyWi1iL61wLxpd+ZOg=="
     }
   },
   "workspace": {
     "dependencies": [
-      "jsr:@sapling/sapling@0.2"
+      "jsr:@hono/hono@^4.7.8",
+      "jsr:@sapling/sapling@0.6"
     ]
   }
 }
